@@ -1,0 +1,53 @@
+{% extends 'admins/base.html' %}
+{% load path_checker %}
+{% block title %} Add Faculty {% endblock %}
+{% block content %}  
+  <div >
+  <a href="{% url 'admins:faculty' %}" class="back-button large-text">
+      <i class="fas fa-arrow-left"></i>
+  </a>
+  </div>
+        <div class="pad-container pt-4">
+          <div class="pt-4">
+            <h2 class="header flex-center">Add Faculty</h2>
+          </div>
+          
+        <div class="flex-center page-box">
+            <div class="large-form-box">
+                <div class="form-header">
+                    Fill the Form
+                </div>
+                <form action="" method="POST" class="mb-4">
+                    {% csrf_token %}
+                    <div class="form-group mb-4">
+                      <input type="text" name="name" value="{{form.name.value|default:''}}" class="form-control" placeholder=" " required>
+                        <label> {{form.name.label}}* </label>
+                        {% if form.name.errors %}
+                        <span class="error-msg">{{form.name.errors}}</span>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group mb-4">
+                      <input type="number" name="department_numbers" value="{{form.department_number.value|default:''}}" class="form-control" placeholder=" " required>
+                        <label> {{form.department_numbers.label}}* </label>
+                        {% if form.department_numbers.errors %}
+                        <span class="error-msg">{{form.department_numbers.errors}}</span>
+                        {% endif %}
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="text" name="officer" value="{{form.officer.value|default:''}}" class="form-control" placeholder=" ">
+                          <label> Faculty Officer </label>
+                          {% if form.officer.errors %}
+                          <span class="error-msg">{{form.officer.errors}}</span>
+                          {% endif %}
+                    </div>
+                    <div class="form-group flex-center">
+                        <button class="site-button">
+                            <i class="fas fa-plus"></i>&nbsp;Add Faculty
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

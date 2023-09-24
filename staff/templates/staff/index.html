@@ -1,0 +1,57 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+{% load path_checker %}
+{% block content %}
+            <div class="content-nav">
+                <h2>Good Day, {{request.user.staff.firstname}} {{request.user.staff.lastname}}</h2>
+                <a href="" class="content-nav-link">
+                    <span class="nav-icon relative">
+                        <i class="fa fa-bell"></i>
+                        {% if unread %}
+                        <span class="not-indic"></span>
+                        {% endif %}
+                    </span>
+                </a>
+               
+            </div>
+            <div class="content-body">
+                <div class="pad-container">
+                    <div class="boot-row row-reverse">
+                    <div class="col-md-8">
+                      {% if not uploads_completed %}
+                        <div class="box">
+                            <h1> Welcome to SIMS  </h1>
+                        </div>
+                      {% endif %}
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="profile-stat">
+                              <a href="">
+                                {% if request.user.staff.image %}
+                                    <img src="{{ request.user.staff.image.url}}" id="image" class="detail-profile-image" style="width: 100px; height: 100px;">
+                                {% else %}
+                                {% if request.user.staff.sex == 'M'%}
+                                    <img src="{% static 'staff/images/male-placeholder.png' %}" id="image" class="detail-profile-image" style="width: 100px; height: 100px;">
+                                {% else %}
+                                    <img src="{% static 'staff/images/female-placeholder.png' %}" id="image" class="detail-profile-image" style="width: 100px; height: 100px;">
+                                {% endif %}
+                                {% endif %}
+                              </a>
+                                
+                                <p><a href="" class="link"><b>{{request.user.staff.firstname}} {{request.user.staff.lastname}}</b></a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+{% endblock %}
+{% block extrascript %}
+{% endblock %}   
+

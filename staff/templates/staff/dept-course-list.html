@@ -1,0 +1,57 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+{% block title %} Department Courses {% endblock %}
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'admins/style.css' %}" />
+{% endblock %}
+{% block content %}
+        <div class="content-nav">
+          <h2 class="greetings">Department Courses </h2>
+          <div class="nav-link-add">
+            <a href="{% url 'staff:department-course-form' %}" class="nav-icon-add">Add Department Course</a>
+          </div>
+        </div>
+        {% for syllabus in object_list %}
+        <div class="syllabus box table-box">
+          <div class="syllabus-class flex-end">
+            <a href="{% url 'staff:department-course-add' syllabus.id %}" class="site-button" style="margin-right: 20px;"><i class="fas fa-pen-alt"></i> Add Course </a>
+          </div>
+          <div class="">
+            <ul class="unstyle mb-4">
+              <li>Department: {{syllabus.department}}</li>
+              <li>Level: {{syllabus.get_level_display}}</li>
+              <li>Semester: {{syllabus.get_semester_display}}</li>
+            </ul>
+            {% if syllabus.departmentcourseline_set.all %}
+            <table class="style-table">
+              <thead>
+                <tr>
+                    <th>Unit</th>
+                    <th>Course Code</th>
+                    <th>Course Title </th>
+                    <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for course in syllabus.departmentcourseline_set.all %}
+                <tr>
+                  <td>{{course.unit}}</td>
+                  <td>{{course.course.code}}</td>
+                  <td>{{course.course.title}}</td>
+                    <td><a href="#" class="site-button"><i class="fa fa-trash"></i></a></td>
+                </tr>
+                
+            {% endfor%}
+                
+              </tbody>
+            </table>
+            {% else %}
+            <div class="no-item">
+              <p>No Courses</p>
+            </div>
+            {% endif %}
+            
+          </div>
+        </div>
+        {% endfor %}
+{% endblock %}

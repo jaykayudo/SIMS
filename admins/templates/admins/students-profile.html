@@ -1,0 +1,95 @@
+{% extends 'admins/base.html' %}
+{% load path_checker %}
+{% load static %}
+{% block title %} Student Details {% endblock %}
+{% block content %}
+        <div class="pad-container pt-4">
+          <div class="content-nav">
+            <h2 class="header">Student Information</h2>
+            <div class="nav-link-add">
+              <a href="{% url 'admins:student-edit' object.pk %}" class="nav-icon-add">Edit</a>
+              <a href="{% url 'admins:student-password-reset' object.id %}" class="nav-icon-add second-btn">Reset Password</a>
+              
+              <a href="{% url 'admins:student-delete' object.id %}" class="nav-icon-add"> 
+                Delete Student
+              </a>
+
+            </div>
+          </div>
+          <div class="row-6">
+            <div class="column-6">
+              <div class="box">
+                  <h3 class="flex-between">Personal Information <a href="{% url 'admins:student-edit' object.pk %}" class="site-button small-text"><i class="fas fa-pen"></i>&nbsp; Edit</a></h3>
+                  {% if object.image %}
+                  <img src="{{ object.image.url}}" class="detail-profile-image">
+                  {% else %}
+                  {% if object.sex == 'M'%}
+                  <img src="{% static 'staff/images/male-placeholder.png' %}" class="detail-profile-image">
+                  {% else %}
+                  <img src="{% static 'staff/images/female-placeholder.png' %}" class="detail-profile-image">
+                  {% endif %}
+                  {% endif %}
+
+                  <ul class="detail-content line-height-small">
+                      <li><strong>Name of Student:</strong> {{object.firstname}} {{object.middleware}} {{object.lastname}}</li>
+                      <li><strong>Date of Birth:</strong> {{object.dob}}</li>
+                      <li><strong>Sex:</strong> {{object.get_sex_display}}</li>
+                      
+                      <li><strong>Email:</strong> {{object.email}}</li>
+                      <li><strong>Phone Number:</strong> {{object.phonenumber}}</li>
+                      <li><strong>State:</strong> {{object.state}} </li>
+                      <li><strong>Local Government:</strong> {{object.lga}}</li>
+                      <li><strong>Home Town:</strong> {{object.hometown}}</li>
+                      <li><strong>Residential Address:</strong> {{object.residential_address}}</li>
+                      <li><strong>Guardian Name:</strong> {{object.guardianname}}</li>
+                      <li><strong>Guardian Phone Number:</strong> {{object.guardianphonenumber}}</li>
+                      <li><strong>Guardian Email:</strong> {{object.guardianemail}}</li>
+                  </ul>
+              </div>
+          </div> 
+          <div class="column-6">
+              <div class="box">
+                  <h3>School Information</h3>
+                  <ul class="detail-content line-height-small">
+                      <li><strong>{{object.firstname}}'s Department:</strong> {{object.department}}
+                        </li>
+                        <li><strong>{{object.firstname}}'s Faculty:</strong> {{object.department.faculty}}
+                        </li>
+                        <li><strong>{{object.firstname}}'s Level:</strong> {{object.get_level_display}}
+                        </li>
+                        <li><strong>{{object.firstname}}'s Matric Number:</strong> {{object.matric_number}}</li>
+                      <li><strong>Status: </strong> <span class="color-success">{{object.status}}</span> </li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="id-card">
+              <h3 class="id-card-header">School</h3>
+              <div class="student-card-detail">
+                {% if object.image %}
+                <img src="{{ object.image.url}}" class="detail-profile-image">
+                {% else %}
+                {% if object.sex == 'M'%}
+                <img src="{% static 'staff/images/male-placeholder.png' %}" class="detail-profile-image">
+                {% else %}
+                <img src="{% static 'staff/images/female-placeholder.png' %}" class="detail-profile-image">
+                {% endif %}
+                {% endif %}
+                <ul class="detail-content line-height-small">
+                  <li class="student-item">
+                    <strong>Name of Student:</strong> {{object.firstname}} {{object.lastname}}
+                  </li>
+                  <li class="student-item">
+                    <strong>Date of Birth:</strong> {{object.dob}}
+                  </li>
+                  <li class="student-item"><strong>Sex:</strong> {{object.get_sex_display}}</li>
+                  <li class="student-item"><strong>Department</strong> {{object.department}}</li>
+                  <li class="student-item">
+                    <strong>Nationality: </strong>Nigerian
+                  </li>
+                </ul>
+              </div>
+            </div>  
+          </div>
+        </div>
+{% endblock %}

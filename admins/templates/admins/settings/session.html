@@ -1,0 +1,48 @@
+{% extends 'admins/settings/base.html' %}
+{% block settings_content %}
+        <div>
+            <div class="content-nav">
+                <h2 class="greetings">School Session</h2>
+                <a href="{% url 'admins:school-session-add' %}" class="content-nav-link">
+                  <span class="nav-icon">
+                    <i class="fas fa-plus"></i>
+                  </span>
+                </a>
+              </div>
+            <div class="box table-box">
+                <table class="style-table">
+                  <caption style="text-align:right;">{{object_list|length}} Sessions</caption>
+                  <thead>
+                    <tr>
+                      <th>Session Range</th>
+                      <th>Current</th>
+                      <th>Make Current</th>
+                    </tr>
+                  </thead>
+                  {% if object_list %}
+                  <tbody>
+                    {% for object in object_list %}
+                              <tr>
+                                    <td>
+                                        {{object.year}}
+                                    </td>
+                                    <td>
+                                        {{object.current|yesno}}
+                                    </td>
+                                    <td>
+                                      <a href="{% url 'admins:school-session-active' object.id %}" class="site-button">Make Current</a>
+                                    </td>
+                                </tr>
+                    {% endfor %}
+                    
+                  </tbody>
+                </table>
+                
+              {% else %}
+              <div class="no-item">
+                <p>No School Session</p>
+              </div>
+              {% endif%}
+              </div> 
+        </div>
+{% endblock %}

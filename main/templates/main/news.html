@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{% load staticfiles %}
+{% block title %}Event and News{% endblock %}
+{% block content %}
+  <div class="page-head">Events and News</div>
+      <div class="news">
+        {% for x in page_obj %}
+        <div class="news_content one">
+          <div class="img"><img src="{{x.first_image.image.url}}"></div>
+          <div class="content">
+            <h2>{{x.name}}</h2>
+            <small>{{x.date}}, {{x.time}}</small>
+            <p>
+              {{x.description|truncatechars:250}} <a href="{% url 'news-detail' x.id %}">Read More</a>
+            </p>
+          </div>
+        </div>
+        {% empty %}
+        <div class="no-item">
+          No Event
+        </div>
+        {% endfor %}
+        
+      </div>
+{% endblock %}

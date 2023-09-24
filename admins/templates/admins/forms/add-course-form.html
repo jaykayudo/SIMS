@@ -1,0 +1,89 @@
+{% extends 'admins/base.html' %}
+{% load path_checker %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}  
+  <div >
+  <a href="{% url 'admins:courses' %}" class="back-button large-text">
+      <i class="fas fa-arrow-left"></i>
+  </a>
+  </div>
+        <div class="pad-container pt-4">
+          <div class="pt-4">
+            <h2 class="header flex-center">{{title}}</h2>
+          </div>
+          
+        <div class="flex-center page-box">
+            <div class="large-form-box">
+                <div class="form-header">
+                    Fill the Form
+                </div>
+                <form action="" method="POST" class="mb-4">
+                    {% csrf_token %}
+                    <div class="form-group mb-4">
+                      <input type="text" name="title" value="{{form.title.value|default:''}}" class="form-control" placeholder=" " required>
+                        <label> {{form.title.label}}* </label>
+                        {% if form.title.errors %}
+                        <span class="error-msg">{{form.title.errors}}</span>
+                        {% endif %}
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="text" name="code" value="{{form.code.value|default:''}}" class="form-control" placeholder=" " required>
+                          <label> {{form.code.label}}* </label>
+                          {% if form.code.errors %}
+                          <span class="error-msg">{{form.code.errors}}</span>
+                          {% endif %}
+                      </div>
+                    <div class="form-group mb-4">
+                        <label for="">Department*</label>
+                          <select name="department" id="" class="form-control" style="padding-left: 4px;" required>
+                              <option value="">Select a Department*</option>
+                              {% for id, x in form.fields.department.choices %}
+                                <option {% if form.department.value == id %}selected{% endif %} value="{{id}}">{{x}}</option>
+                            {% endfor %}
+                          </select> 
+                          {% if form.department.errors %}
+                          <span class="error-msg">{{form.department.errors}}</span>
+                          {% endif %}                       
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="">Level*</label>
+                          <select name="level" id="" class="form-control" style="padding-left: 4px;" required>
+                              <option value="">Select a Level*</option>
+                              {% for id, x in form.fields.level.choices %}
+                                <option {% if form.level.value == id %}selected{% endif %} value="{{id}}">{{x}}</option>
+                            {% endfor %}
+                          </select>
+                          {% if form.level.errors %}
+                          <span class="error-msg">{{form.level.errors}}</span>
+                          {% endif %}                        
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="">Semester*</label>
+                          <select name="semester" id="" class="form-control" style="padding-left: 4px;" required>
+                              <option value="">Select a Semester*</option>
+                              {% for id, x in form.fields.semester.choices %}
+                                <option {% if form.semester.value == id %}selected{% endif %} value="{{id}}">{{x}}</option>
+                            {% endfor %}
+                          </select>
+                          {% if form.semester.errors %}
+                          <span class="error-msg">{{form.semester.errors}}</span>
+                          {% endif %}                        
+                    </div>
+                    <div class="form-group mb-4">
+                      <textarea type="text" name="course_outline" class="form-control" placeholder=" " required>{{form.course_outline.value|default:''}}</textarea>
+                        <label> {{form.course_outline.label}}* </label>
+                        {% if form.course_outline.errors %}
+                        <span class="error-msg">{{form.course_outline.errors}}</span>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group flex-center">
+                        <button class="site-button">
+                            <i class="fas fa-plus"></i>&nbsp;{{btn_text}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

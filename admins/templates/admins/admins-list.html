@@ -1,0 +1,58 @@
+{% extends 'admins/base.html'%}
+{% load static %}
+{% block content %}
+<div class="container">
+ <div class="details-content">
+            <div class="details-nav">
+              <div class="personal-info">
+                <h1 class="personal-info-header">Admins</h1>
+              </div>
+              <div class="nav-link-add">
+                <a href="{% url 'admins:admins-add' %}" class="nav-icon-save">Add Admin</a>
+                
+              </div>
+            </div>
+          <table class="style-table">
+            <caption style="text-align:right;">{{object_list|length}} Admins</caption>
+            <thead>
+              <tr>
+                <th>Admin Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for object in object_list %}
+                        <tr>
+                              <td>
+                                  <a href="{% url 'admins:admins-details' object.pk  %}" class="table-link">
+                                  {% if object.image %}
+                                      <img src="{{ object.image.url}}"  class="table-image" >
+                                  {% else %}
+                                  <img src="{% static 'staff/images/male-placeholder.png' %}"  class="table-image">
+                                  {% endif %}
+                                      
+                                      {{object.firstname}} {{object.lastname}}
+                                  </a>
+                                  
+                              </td>
+                              <td>
+                                  {{object.phonenumber}}
+                              </td>
+                              <td>
+                                  {{object.user.email}}
+                              </td>
+                              <td>
+                                {%if object.user.is_active %}active{% else %}inactive{% endif %}
+                              </td>
+                          </tr>
+              {% endfor %}
+              
+            </tbody> 
+          </table>
+          </div>
+    
+</div>
+         
+{% endblock %}

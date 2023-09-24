@@ -1,0 +1,74 @@
+{% extends 'student/base.html' %}
+{% load static %}
+{% block title %} Register Courses {% endblock %}
+{% block content %}
+<div class="pad-container pt-4">
+    <div class="pt-4">
+      <h2 class="header flex-center">Registered Courses</h2>
+    </div>
+    <div id="printarea">
+
+    
+    <div>
+        <ul class="unstyle">
+            <li><strong>Name of Student:</strong> {{request.user.student.firstname}} {{request.user.student.middlename}} {{request.user.student.lastname}}</li>
+            <li><strong>Department:</strong> {{request.department}}</li>
+            <li><strong>Level:</strong> <input type="hidden" name="level" value="{{level}}" >{{course_reg.get_level_display}}</li>
+            <li><strong>Session:</strong> <input type="hidden" name="session" value="{{session}}" >{{course_reg.session}}</li>
+        </ul>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Session</th>
+                <th>Unit</th>
+                <th>Course Code</th>
+                <th>Course Title</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in course_reg.courseregistrationline_set.all %}
+                <tr>
+                    <td>
+                        {{course.session}}
+                    </td>
+                    <td>
+                        {{course.unit}}
+                    </td>
+                    <td>
+                        {{course.course.code}}
+                    </td>
+                    <td>
+                        {{course.course.title}}
+                    </td>
+                </tr>
+            {% endfor %}
+                <tr>
+                    <td>Total Unit</td>
+                    <td>{{course_reg.calculate_unit}}</td>
+
+                </tr>
+        </tbody>
+    </table>
+    </div>
+    <div class="flex-center">
+        <button class="btn btn-success" onclick="print_reg()">
+            <i class="fa fa-print"></i> Print
+        </button>
+    </div>
+</div>
+{% endblock %}
+{% block extrascript %}
+<script>
+    const print_reg = ()=>{
+        const wrapper = document.getElementById('wrapper');
+        const printarea = document.getElementById('wrapper');
+        wrapper.style.visibility = "hidden";
+        printarea.style.visibility=  "visible";
+        window.print()
+        wrapper.style.visibility = "visible";
+    }
+</script>
+
+{% endblock %}

@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+      integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'admins/fontawesome-free-5.12.1-web/css/all.min.css' %}"
+    />
+    
+    
+    <link rel="stylesheet" href="{% static 'staff/variables.css' %}" />
+    <link rel="stylesheet" href="{% static 'admins/bootstrap5/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'admins/style.css' %}" />
+    <title>Admin Login</title>
+    <style>
+        label {
+  display: block;
+}
+select {
+  border: 2px solid #242038;
+  padding: 8px 8px;
+  border-radius: 8px;
+}
+.option {
+  border: 2px solid #242038;
+  padding: 8px 8px;
+  border-radius: 8px;
+}
+.input {
+  width: 100%;
+  margin: 50px auto;
+}
+#email {
+  margin-bottom: 30px;
+}
+form h1 {
+  margin-bottom: 20px;
+}
+button {
+  padding: 10px 70px;
+  width: 250px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #5c5388;
+}
+button a {
+  text-decoration: none;
+  color: white;
+}
+.active {
+  border-bottom: 3px solid;
+}
+li a {
+  text-decoration: none;
+  color: black;
+}
+.large-form-box{
+  width: 60%;
+  margin:auto;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.134);
+}
+.large-form-box .form-header{
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  color: black;
+  padding: 10px 0;
+  font-size: 20px;
+}
+.large-form-box form{
+  padding: 0 20px;
+}
+.large-form-box .form-group{
+  position: relative;
+  padding: 5px 0px;
+}
+.large-form-box .side-form-group{
+  position: relative;
+  padding: 0 13px;
+}
+.large-form-box .form-control{
+  width: 100%;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 2px solid #242038;
+  font-size: 16px;
+  color: black;
+  padding: 8px 8px;
+}
+.large-form-box .form-control ~ label{
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  padding: 0;
+  
+  transition: 0.5s;
+  pointer-events: none;
+}
+.large-form-box .side-form-group label{
+  left: 25px;
+  top: 11px;
+}
+.large-form-box .form-control:focus ~ label, .large-form-box .form-control:not(:placeholder-shown) ~ label{
+  top: -5px;
+  background-color: white;
+}
+.large-form-box .side-form-group .form-control:focus ~ label, .large-form-box .side-form-group .form-control:not(:placeholder-shown) ~ label{
+  top: -10px;
+}
+.large-form-box form .site-button{
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #5c5388;
+}
+.m-none{
+  margin: 0!important;
+}
+.large-form-box form .site-button:hover{
+  background-color: #9b91ce;
+}
+.forms-contact{
+  padding: 10px;
+}
+.about-box{
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
+  
+}
+.about-box > *{
+  color: white!important;
+}
+.about-box h1{
+  padding: 20px 0;
+}
+@media screen and (min-width: 767px) {
+  .about-content{
+    display: flex;
+  }
+  .about-content p {
+  width: 60%;
+}
+.about-content .logo{
+  width: 40%;
+}
+.large-form-box{
+  width: 40%;
+}
+}
+.no-item{
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  text-transform: capitalize;
+}
+.page-head{
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 800;
+}
+.error-msg-box{
+  display: inline-block;
+  padding: 7px 5px;
+  background-color: rgb(175, 47, 47);
+  border-radius: 5px;
+  width: 100%;
+}
+.error-msg-box *{
+  color: white!important;
+  list-style: none;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+        <a class="navbar-brand" href="#">SIMS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'student:login' %}">Student Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'staff:login' %}">Staff Login</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'admins:login' %}">Admin Login</a>
+                </li>
+              </ul>
+          </ul>
+        </div>
+        </div>
+      </nav>
+      <div class="large-form-box">
+        <h2 class="form-header">Admin Login</h2>
+        <form action="" method="POST">
+          {% csrf_token %}
+          {% if form.non_field_errors%}
+          <span class="error-msg-box">
+            {{form.non_field_errors|default:''}}
+          </span>
+          {% endif %}
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" value="{{form.email.value|default:''}}"  required placeholder=" "/>
+            <label >Email Address</label>
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" class="form-control" required placeholder=" "/>
+            <label >Password</label>
+          </div>
+          <button type="submit" class="site-button">
+            Login
+          </button>
+        </form>
+        <script src="{% static 'admins/jquery.js' %}"></script> 
+      <script src="{% static 'admins/bootstrap5/js/bootstrap.js' %}"></script> 
+      </div>   
+</body>
+</html>

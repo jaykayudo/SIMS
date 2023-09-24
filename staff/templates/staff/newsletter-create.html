@@ -1,0 +1,78 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+{% block title %}Create Newsletter{% endblock %}
+{% block content %}
+            <div class="pad-container pt-4">
+                <div >
+                    <a href="{% url 'staff:newsletter' %}" class="back-button large-text">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </div>
+                <h2 class="header">
+                    Create NewsLetter
+                </h2>
+                    <div class="pad-container">
+                        {{form.errors|default:""}}
+                        <div class="large-form-box">
+                            <div class="form-header">
+                                Fill the Form
+                            </div>
+                            <form action=""  method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <input type="text" name="title" class="form-control" placeholder=" " required>
+                                    <label> Subject </label>
+                                    {% if form.title.errors %}
+                                      <span class="error-msg">{{form.title.errors}}</span>
+                                      {% endif %}
+                                </div>
+                                <input type="hidden" name="department" value="{{request.department.id}}">
+                                <div class="form-group mb-4">
+                                    <label for="">Level*</label>
+                                      <select name="level" id="" class="form-control" style="padding-left: 4px;">
+                                          <option value="">Select a Level*</option>
+                                          {% for id, x in form.fields.level.choices %}
+                                            <option {% if form.level.value == id %}selected{% endif %} value="{{id}}">{{x}}</option>
+                                        {% endfor %}
+                                      </select>
+                                      <span class="small-text">Leave blank for to select all levels</span>
+                                      {% if form.level.errors %}
+                                      <span class="error-msg">{{form.level.errors}}</span>
+                                      {% endif %}                        
+                                </div>
+                                <div class="form-group">
+                                    <textarea type="text" name="message" class="form-control" placeholder=" " required>{{form.message.value|default:''}}</textarea>
+                                      <label> {{form.message.label}}* </label>
+                                      {% if form.message.errors %}
+                                      <span class="error-msg">{{form.message.errors}}</span>
+                                      {% endif %}
+                                  </div>
+                                
+                                <div class="form-group">
+                                    <button class="site-button" id="file-button"><i class="fa fa-upload"></i> Choose a File</button> <span id="file-text" class="small-text">No File Chosen</span>
+                                    <input type="file" name="file" id="file" hidden>
+                                </div>
+                                <div class="form-group flex-center">
+                                    <input type="submit" value="Upload" class="site-button">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+{% endblock %}
+{% block extrascript %}
+    <script>
+        document.getElementById('file-button').onclick = function(e){
+            e.preventDefault()
+            document.getElementById('file').click()
+        }
+        document.getElementById('file').onchange = function(e){
+            if(e.target.value == ""){
+                document.getElementById('file-text').textContent = "No File Chosen"
+            }
+            else{
+                document.getElementById('file-text').textContent = e.target.files.length + " File Chosen"
+            }
+        }
+    </script>
+{% endblock %}

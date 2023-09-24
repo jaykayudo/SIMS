@@ -1,0 +1,61 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+{% block title %}Upload Resource{% endblock %}
+{% block content %}
+            <div class="pad-container pt-4">
+                <div >
+                    <a href="{% url 'staff:resources' %}" class="back-button large-text">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </div>
+                <h2 class="header">
+                    Upload Course Resources
+                </h2>
+                    <div class="pad-container">
+                        {{form.errors|default:""}}
+                        <div class="large-form-box">
+                            <div class="form-header">
+                                Upload Course Resource
+                            </div>
+                            <form action=""  method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder=" " required>
+                                    <label> Resource Name </label>
+                                </div>
+                                <div class="form-group">
+                                   <select name="course" id="" class="form-control" style="padding-left: 4px;" required>
+                                       <option value="">Choose a Course</option>
+                                       {% for x in courses %}
+                                        <option value="{{x.id}}">{{x.code}} - {{x.title}}</option>
+                                       {% endfor %}
+                                   </select>
+                                </div>
+                                <div class="form-group">
+                                    <button class="site-button" id="file-button"><i class="fa fa-upload"></i> Choose a File</button> <span id="file-text" class="small-text">No File Chosen</span>
+                                    <input type="file" name="file" id="file" hidden>
+                                </div>
+                                <div class="form-group flex-center">
+                                    <input type="submit" value="Upload" class="site-button">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+{% endblock %}
+{% block extrascript %}
+    <script>
+        document.getElementById('file-button').onclick = function(e){
+            e.preventDefault()
+            document.getElementById('file').click()
+        }
+        document.getElementById('file').onchange = function(e){
+            if(e.target.value == ""){
+                document.getElementById('file-text').textContent = "No File Chosen"
+            }
+            else{
+                document.getElementById('file-text').textContent = e.target.files.length + " File Chosen"
+            }
+        }
+    </script>
+{% endblock %}

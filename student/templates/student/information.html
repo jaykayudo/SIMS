@@ -1,0 +1,99 @@
+{% extends 'student/base.html' %}
+{% load static %}
+{% block title %} NewsLetter {% endblock %}
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'admins/style.css' %}" />
+{% endblock %}
+{% block content %}
+<style>
+    .box{
+        background-color: white;
+        border-radius: 15px;
+        padding: 15px;
+    }
+    .filter{
+        border: none;
+    }
+</style>
+      <div class="content-nav">
+        <h2 class="greetings">NewsLetters</h2>
+      </div>
+      <!-- content features -->
+      <div class="staff-items">
+        <!-- staff -->
+        <div class="search-filter">
+          <form action="" method="GET">
+          <!-- searchbar -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="filter">
+                <div class="subject-filter">
+                    <select name="level" id="filter-two" class="filter-items">
+                      <option value="">Level</option>
+                      {% for x in level %}
+                      <option value="{{x}}">{{x}}00 Level</option>
+                     {% endfor %}
+                    </select>
+                  </div>
+                <div class="subject-filter"  >
+                  <input type="submit" value="Filter" class="filter-button">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+      <!-- table data -->
+      <div class="p-4">
+        {% if page_obj %}
+        <div class="row">
+            {% for object in page_obj %}
+                <div class="col-md-12">
+                    <div class="box">
+                        <h3>
+                            {{object.title}}
+                        </h3>
+                        <p>
+                            {{object.message}}
+                        </p>
+                        <footer>
+                            <p>Date Posted: {{object.published_date}}</p>
+                        </footer>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="flex-center">
+          <ul class="paginator">
+              {% if page_obj.has_previous %}
+                  <li class="page-item"><a class="page-link" ><span>&laquo;</span></a></li>
+                  <li class="page-item">
+                      <a class="page-link" href="?page={{page_obj.previous_page_number}}">{{page_obj.previous_page_number}}</a>
+                  </li>
+                  {% else %}
+                  <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true"><span>&laquo;</span></a></li>
+              {% endif %}
+              
+              {% for pagenum in page_obj.paginator.page_range %}
+              {% if page_obj.number == pagenum %}
+                  <li class="page-item{% if page_obj.number == pagenum %} active{% endif %}">
+                      <a class="page-link" href="?page={{pagenum}}">{{pagenum}}</a>
+                  </li>
+              {% endif %}
+              {% endfor %}
+              {% if page_obj.has_next %}
+                  <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number}}">{{page_obj.next_page_number}}</a></li>
+                  <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number}}"><span>&raquo;</span></a></li>
+              {% else %}
+                  <li class="page-item disabled"><a class="page-link" href="#" ><span>&raquo;</span></a></li>
+              {% endif %}
+          </ul>
+      </div>
+      {% else %}
+      <div class="no-item">
+        <p>No Information</p>
+      </div>
+      {% endif%}
+      </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'admins/base.html' %}
+{% load static %}
+{% load path_checker %}
+{% block title %} Delete Student {% endblock %}
+{% block content %}
+        <div class="pad-container pt-4">
+          <div class="pt-4">
+            <h2 class="header flex-center">Delete Student | {{object.firstname}} {{object.lastname}}</h2>
+          </div>
+          
+        <div class="flex-center page-box">
+            <div class="large-form-box pt-2">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {% if object.image %}
+                    <img src="{{object.image.url}}" class="detail-profile-image">
+                    {% else %}
+                    {% if object.sex == 'M'%}
+                    <img src="{% static 'staff/images/male-placeholder.png' %}" class="detail-profile-image">
+                    {% else %}
+                    <img src="{% static 'staff/images/female-placeholder.png' %}" class="detail-profile-image">
+                    {% endif %}
+                    {% endif %}
+                    <div class="boot-row">
+                        <div class="col-6">Name:</div>
+                        <div class="col-6">{{object.firstname}} {{object.lastname}}</div>
+                    </div>
+                    <div class="boot-row mb-4">
+                        <div class="col-6">Matric Number:</div>
+                        <div class="col-6">{{object.matric_number}}</div>
+                    </div>
+                    <div class="mb-4" >
+                        <p>Are You Sure you want to delete this student?</p>
+                        <p class="small-text">This action is not reversable</p>
+                    </div>
+                    <div class="flex-between pe-2">
+                        <input type="submit" value="Yes, Delete Student" class="site-button">
+                        <a href="{% url 'admins:student-details' object.id %}" class="site-button">No, Take me back</a>
+                    </div>
+                </form>
+            </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'student/base.html' %}
+{% load static %}
+{% load path_checker %}
+{% block content %}
+            <div class="content-nav">
+                <h2>Good Day, {{request.user.student.firstname}} {{request.user.student.lastname}}</h2>
+                <a href="" class="content-nav-link">
+                    <span class="nav-icon relative">
+                        <i class="fa fa-bell"></i>
+                        {% if unread %}
+                        <span class="not-indic"></span>
+                        {% endif %}
+                    </span>
+                </a>
+               
+            </div>
+            <div class="content-body p-4">
+                    <h1 class="text-center text-bold">Welcome to your Student Information Management System (SIMS) </h1>
+            </div>
+{% endblock %}
+{% block extrascript %}
+   
+{% endblock %}   
+

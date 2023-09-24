@@ -1,0 +1,132 @@
+{% extends 'admins/base.html' %}
+{% load static %}
+{% block title %} Courses {% endblock %}
+{% block content %}
+<style>
+    .box{
+        background-color: white;
+        border-radius: 15px;
+        padding: 15px;
+    }
+</style>
+      <div class="content-nav">
+        <h2 class="greetings">Courses</h2>
+        <a href="{% url 'admins:course-add' %}" class="content-nav-link">
+          <span class="nav-icon">
+            <i class="fas fa-plus"></i>
+          </span>
+        </a>
+      </div>
+      <!-- content features -->
+      <div class="staff-items">
+        <!-- staff -->
+        <div class="search-filter">
+          <form action="" method="GET">
+          <!-- searchbar -->
+          <div class="row">
+            <div class="col-md-4">
+            <div class="searchbar">
+              <input
+              type="search"
+              name="search"
+              id="search"
+              class="search"
+              placeholder="Course"
+              style="width: 100%;"
+              />
+            </div>
+            </div>
+            <div class="col-md-8">
+              <div class="filter">
+                <div class="class-filter">
+                  <select name="faculty" id="" class="filter-items">
+                    <option value="">Faculty</option>
+                    {% for x in faculties %}
+                        <option value="{{x.id}}">{{x.name}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <!-- subject filter -->
+                <div class="subject-filter">
+                  <select name="department"  class="filter-items">
+                    <option value="">Department</option>
+                    {% for x in departments %}
+                        <option value="{{x.id}}">{{x.name}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <!-- subject filter -->
+                <div class="subject-filter">
+                  <select name="level" id="filter-two" class="filter-items">
+                    <option value="">Level</option>
+                    <option value="1">100 Level</option>
+                    <option value="2">200 Level</option>
+                  </select>
+                </div>
+                <div class="subject-filter"  >
+                  <input type="submit" value="Filter" class="filter-button">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+      <!-- table data -->
+      <div class="p-4">
+        {% if page_obj %}
+        <div class="row">
+            {% for object in page_obj %}
+                <div class="col-md-6">
+                    <div class="box">
+                        <h3 class="flex-between">{{object.code}}
+                            <div>
+                                <a href="{% url 'admins:course-edit' object.id  %}" class="site-button small-text"><i class="fa fa-pencil-alt"></i>&nbsp; Edit</a>
+                                <a href="{% url 'admins:course-delete' object.id  %}" class="site-button small-text btn-danger"><i class="fa fa-trash"></i>&nbsp; Delete</a>
+                            </div> 
+                            
+                        </h3>
+                        <ul class="detail-content line-height-small">
+                            <li><strong>Course title:</strong> {{object.title}}</li>
+                            <li><strong>Department:</strong> {{object.department}}</li>
+                            <li><strong>Level:</strong> {{object.get_level_display}}</li>
+                            <li><strong>Semester:</strong> {{object.semester}}</li>
+                            <li><strong>Course Outline:</strong> {{object.course_outline}}</li>
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="flex-center">
+          <ul class="paginator">
+              {% if page_obj.has_previous %}
+                  <li class="page-item"><a class="page-link" ><span>&laquo;</span></a></li>
+                  <li class="page-item">
+                      <a class="page-link" href="?page={{page_obj.previous_page_number}}">{{page_obj.previous_page_number}}</a>
+                  </li>
+                  {% else %}
+                  <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true"><span>&laquo;</span></a></li>
+              {% endif %}
+              
+              {% for pagenum in page_obj.paginator.page_range %}
+              {% if page_obj.number == pagenum %}
+                  <li class="page-item{% if page_obj.number == pagenum %} active{% endif %}">
+                      <a class="page-link" href="?page={{pagenum}}">{{pagenum}}</a>
+                  </li>
+              {% endif %}
+              {% endfor %}
+              {% if page_obj.has_next %}
+                  <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number}}">{{page_obj.next_page_number}}</a></li>
+                  <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number}}"><span>&raquo;</span></a></li>
+              {% else %}
+                  <li class="page-item disabled"><a class="page-link" href="#" ><span>&raquo;</span></a></li>
+              {% endif %}
+          </ul>
+      </div>
+      {% else %}
+      <div class="no-item">
+        <p>No Course</p>
+      </div>
+      {% endif%}
+      </div>
+{% endblock %}

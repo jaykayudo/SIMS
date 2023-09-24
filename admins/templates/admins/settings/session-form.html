@@ -1,0 +1,35 @@
+{% extends 'admins/settings/base.html' %}
+{% block settings_content %}
+  <div >
+  <a href="{% url 'admins:school-session' %}" class="back-button large-text">
+      <i class="fas fa-arrow-left"></i>
+  </a>
+  </div>
+        <div class="pad-container pt-4">
+          <div class="pt-4">
+            <h2 class="header flex-center">Add Session</h2>
+          </div>
+          
+        <div class="flex-center page-box">
+            <div class="large-form-box">
+                <div class="form-header">
+                    Fill the Form
+                </div>
+                <form action="" method="POST" class="mb-4">
+                   {% csrf_token %}
+                    <div class="form-group mb-4">
+                        <!-- {{form.name}} -->
+                        <input type="text" name="year" value="{{form.year.value|default:''}}" class="form-control" placeholder=" " required>
+                        <label>{{form.year.label}}*</label>
+                        {% if form.year.errors %}
+                        <span class="error-msg">{{form.year.errors}}</span>
+                        {% endif %}
+                    </div>
+                    <div class="flex-center">
+                        <input type="submit" value="Create" class="site-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

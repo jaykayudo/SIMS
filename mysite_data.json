@@ -1,0 +1,2860 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "admins",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "admins",
+    "model": "class"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "admins",
+    "model": "event"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "admins",
+    "model": "sitesetting"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "admins",
+    "model": "subject"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "admins",
+    "model": "teacherprogramme"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "admins",
+    "model": "student"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "admins",
+    "model": "staff"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "admins",
+    "model": "schedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "admins",
+    "model": "mail"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "admins",
+    "model": "eventimage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "admins",
+    "model": "admin"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "admins",
+    "model": "upload_assignment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "admins",
+    "model": "uploads"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1gt2mda03btrh2x6ka5j7jpnenfu9pbu",
+  "fields": {
+    "session_data": "ZGY2ZjFkNWYxZjk5ZTdhOWE3NjY0Zjk5MjE3OGRkZWJlODdmYzg3OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhZDc4YWQ2NDM2NDc2YmY4YTdkMzY3ODZhOTJlYzhmNjEwZWJjZjViIn0=",
+    "expire_date": "2022-05-07T02:40:27.180Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1vheghbmss31ghkkc54qgtgjf33ehcwv",
+  "fields": {
+    "session_data": "ZGY2ZjFkNWYxZjk5ZTdhOWE3NjY0Zjk5MjE3OGRkZWJlODdmYzg3OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhZDc4YWQ2NDM2NDc2YmY4YTdkMzY3ODZhOTJlYzhmNjEwZWJjZjViIn0=",
+    "expire_date": "2022-05-09T09:59:21.479Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3mwz8p1g89sj5nmb70kobxegggk7age6",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2023-03-24T05:31:10.540Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4h70903oowwaqsq4at6adycys48q23a1",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-23T10:27:30.970Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "60muldbj8m49jk7qergng9mluha9zbil",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-31T21:32:46.833Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6d2iapu7l51n5b3izy73ccbt5320nc7y",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2023-02-11T10:58:13.467Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6nz4t4iwg4zqnam749tyesfdwampcbxm",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-27T22:20:22.390Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6tet6qvcp2s7jh6qd7fe6arjn2aqu2wm",
+  "fields": {
+    "session_data": "ZGY2ZjFkNWYxZjk5ZTdhOWE3NjY0Zjk5MjE3OGRkZWJlODdmYzg3OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhZDc4YWQ2NDM2NDc2YmY4YTdkMzY3ODZhOTJlYzhmNjEwZWJjZjViIn0=",
+    "expire_date": "2022-05-04T08:56:04.825Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7gatnhng23l9u819mxw1aovqp2734rvq",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-06-01T22:38:46.623Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9hr1cejjmcuc29v909n2oq32oo1ooabf",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-10T09:34:22.525Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "adxji1kebtzz4fk64ug5xxl1z6m45zhc",
+  "fields": {
+    "session_data": "MmNlYjBkY2M4ZDM4YjI5MTY1YjFhOTNiOTMzZjRhMjhmMmE0OGRlYjp7fQ==",
+    "expire_date": "2022-05-17T10:18:06.030Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "am0klbwhmozmlvzdeuz9bbx8q6djhqbz",
+  "fields": {
+    "session_data": "ZGY2ZjFkNWYxZjk5ZTdhOWE3NjY0Zjk5MjE3OGRkZWJlODdmYzg3OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhZDc4YWQ2NDM2NDc2YmY4YTdkMzY3ODZhOTJlYzhmNjEwZWJjZjViIn0=",
+    "expire_date": "2022-05-10T09:23:14.962Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bd5dywoks0qp8yszhdamy2ohdt0vmml2",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-06-02T10:33:16.934Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "e8lzg6owqhgf5gfjtt1209txou6cqfpy",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-27T22:26:05.271Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "f9gx2cp2g3brtllw9eafj1rwmhu1mdgo",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-18T00:46:47.629Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gohvsxx9cvy8tr7tx4pyc4astmzati53",
+  "fields": {
+    "session_data": "ZGY2ZjFkNWYxZjk5ZTdhOWE3NjY0Zjk5MjE3OGRkZWJlODdmYzg3OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhZDc4YWQ2NDM2NDc2YmY4YTdkMzY3ODZhOTJlYzhmNjEwZWJjZjViIn0=",
+    "expire_date": "2022-05-10T09:29:47.716Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ho9jxi8q85fgvrhyvi8lvkypygxcktmb",
+  "fields": {
+    "session_data": "ZGY2ZjFkNWYxZjk5ZTdhOWE3NjY0Zjk5MjE3OGRkZWJlODdmYzg3OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhZDc4YWQ2NDM2NDc2YmY4YTdkMzY3ODZhOTJlYzhmNjEwZWJjZjViIn0=",
+    "expire_date": "2022-05-07T13:27:06.886Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hpsjn9j0o9tef86dfgonywcz61gk6hkb",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-29T13:02:44.808Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mx4prumdwmrogwaenuyfd1lzh8deh21j",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-23T11:38:11.312Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "p84z1skn0e93bj9ohdtatlpoxhj6ew45",
+  "fields": {
+    "session_data": "ZGY2ZjFkNWYxZjk5ZTdhOWE3NjY0Zjk5MjE3OGRkZWJlODdmYzg3OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhZDc4YWQ2NDM2NDc2YmY4YTdkMzY3ODZhOTJlYzhmNjEwZWJjZjViIn0=",
+    "expire_date": "2022-05-09T14:30:13.720Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qf1dh5shg93l7qq1glm4i0vi5w56j2em",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-21T14:12:09.958Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qyc7tegasshr68og9jte61m9ksruxpiq",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-26T15:21:57.345Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "r1tuoksgffnmma02oxahszg282oio81d",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2022-05-23T09:22:56.995Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wp1gg409j1ju3fwntgb8qbfy833ezjum",
+  "fields": {
+    "session_data": "MTliZTRiZDZjMTA4NmJkODA2ZmY3Y2Q0NWM1YzE1MGM2MTBhYTY4OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0YmNlMzU3OTY3YThjNmRiODk4MTlkYzlkOTY3YTNmNTVjYjRjMWNjIn0=",
+    "expire_date": "2023-02-10T00:52:25.808Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yffo0ffzm80h7v7qmrw4d0mxcr2pakbt",
+  "fields": {
+    "session_data": "ZGY2ZjFkNWYxZjk5ZTdhOWE3NjY0Zjk5MjE3OGRkZWJlODdmYzg3OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhZDc4YWQ2NDM2NDc2YmY4YTdkMzY3ODZhOTJlYzhmNjEwZWJjZjViIn0=",
+    "expire_date": "2022-05-07T01:19:44.242Z"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 1,
+  "fields": {
+    "name": "Mathematics",
+    "abbr": "MTH"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 2,
+  "fields": {
+    "name": "English",
+    "abbr": "ENG"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 3,
+  "fields": {
+    "name": "Cultural and Creative Art",
+    "abbr": "CCA"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 4,
+  "fields": {
+    "name": "Computer Science",
+    "abbr": "Comp sci"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 5,
+  "fields": {
+    "name": "Basic Science",
+    "abbr": "BSC"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 6,
+  "fields": {
+    "name": "Agricultural Science",
+    "abbr": "Agric"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 7,
+  "fields": {
+    "name": "Basic Technology",
+    "abbr": "Basic Tech"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 8,
+  "fields": {
+    "name": "Chemistry",
+    "abbr": "Chem"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 9,
+  "fields": {
+    "name": "physics",
+    "abbr": "PHY"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 10,
+  "fields": {
+    "name": "Civic Education",
+    "abbr": "Civic"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 11,
+  "fields": {
+    "name": "Fishery",
+    "abbr": "Fishery"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 12,
+  "fields": {
+    "name": "Economics",
+    "abbr": "Econs"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 13,
+  "fields": {
+    "name": "Geography",
+    "abbr": "Geo"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 14,
+  "fields": {
+    "name": "Christian Religious Knowledge",
+    "abbr": "CRK"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 15,
+  "fields": {
+    "name": "Islamic Religious Knowledge",
+    "abbr": "IRK"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 16,
+  "fields": {
+    "name": "Health Sciences",
+    "abbr": "Health Sci"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 17,
+  "fields": {
+    "name": "Social sciences",
+    "abbr": "Social Sci"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 18,
+  "fields": {
+    "name": "Business Studies",
+    "abbr": "Busi stud"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 19,
+  "fields": {
+    "name": "Home Economics",
+    "abbr": "Home Econs"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 20,
+  "fields": {
+    "name": "French",
+    "abbr": "Fren"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 21,
+  "fields": {
+    "name": "Physical Health Education",
+    "abbr": "PHE"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 22,
+  "fields": {
+    "name": "Igbo Language",
+    "abbr": "Igbo"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 23,
+  "fields": {
+    "name": "Hausa Language",
+    "abbr": "Hausa"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 24,
+  "fields": {
+    "name": "Yoruba Language",
+    "abbr": "Yoruba"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 25,
+  "fields": {
+    "name": "Music",
+    "abbr": "Music"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 26,
+  "fields": {
+    "name": "Literature in English",
+    "abbr": "LIT"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 27,
+  "fields": {
+    "name": "Further Mathematics",
+    "abbr": "Furt Maths"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 28,
+  "fields": {
+    "name": "Biology",
+    "abbr": "Bio"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 29,
+  "fields": {
+    "name": "Commerce",
+    "abbr": "Commerce"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 30,
+  "fields": {
+    "name": "Marketing",
+    "abbr": "Marketing"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 31,
+  "fields": {
+    "name": "Tie and Dye",
+    "abbr": "T and D"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 32,
+  "fields": {
+    "name": "Accounting",
+    "abbr": "Accounting"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 33,
+  "fields": {
+    "name": "Book Keeping",
+    "abbr": "Book Keep"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 34,
+  "fields": {
+    "name": "Office Pratice",
+    "abbr": "Office Pra"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 35,
+  "fields": {
+    "name": "Food and Nutrition",
+    "abbr": "Food & Nut"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 36,
+  "fields": {
+    "name": "Government",
+    "abbr": "Gov"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 37,
+  "fields": {
+    "name": "History",
+    "abbr": "History"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 38,
+  "fields": {
+    "name": "Technical Drawing",
+    "abbr": "TD"
+  }
+},
+{
+  "model": "admins.subject",
+  "pk": 39,
+  "fields": {
+    "name": "Garment Making",
+    "abbr": "G M"
+  }
+},
+{
+  "model": "admins.class",
+  "pk": 1,
+  "fields": {
+    "name": "JSS 1",
+    "classteacher": "John Maduka",
+    "subject": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  }
+},
+{
+  "model": "admins.class",
+  "pk": 2,
+  "fields": {
+    "name": "JSS 2",
+    "classteacher": "",
+    "subject": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  }
+},
+{
+  "model": "admins.class",
+  "pk": 3,
+  "fields": {
+    "name": "JSS 3",
+    "classteacher": "",
+    "subject": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  }
+},
+{
+  "model": "admins.class",
+  "pk": 4,
+  "fields": {
+    "name": "SS2",
+    "classteacher": "Zakari",
+    "subject": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      20,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ]
+  }
+},
+{
+  "model": "admins.class",
+  "pk": 5,
+  "fields": {
+    "name": "SS1",
+    "classteacher": "Muhammed",
+    "subject": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      20,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ]
+  }
+},
+{
+  "model": "admins.class",
+  "pk": 6,
+  "fields": {
+    "name": "SS3",
+    "classteacher": "Jasper Maduka",
+    "subject": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      20,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ]
+  }
+},
+{
+  "model": "admins.teacherprogramme",
+  "pk": 1,
+  "fields": {
+    "klass": 2,
+    "subject": 2,
+    "report": ""
+  }
+},
+{
+  "model": "admins.teacherprogramme",
+  "pk": 2,
+  "fields": {
+    "klass": 1,
+    "subject": 1,
+    "report": ""
+  }
+},
+{
+  "model": "admins.teacherprogramme",
+  "pk": 3,
+  "fields": {
+    "klass": 2,
+    "subject": 3,
+    "report": ""
+  }
+},
+{
+  "model": "admins.teacherprogramme",
+  "pk": 4,
+  "fields": {
+    "klass": 2,
+    "subject": 1,
+    "report": ""
+  }
+},
+{
+  "model": "admins.teacherprogramme",
+  "pk": 5,
+  "fields": {
+    "klass": 3,
+    "subject": 3,
+    "report": ""
+  }
+},
+{
+  "model": "admins.teacherprogramme",
+  "pk": 6,
+  "fields": {
+    "klass": 2,
+    "subject": 4,
+    "report": ""
+  }
+},
+{
+  "model": "admins.teacherprogramme",
+  "pk": 7,
+  "fields": {
+    "klass": 4,
+    "subject": 2,
+    "report": ""
+  }
+},
+{
+  "model": "admins.teacherprogramme",
+  "pk": 8,
+  "fields": {
+    "klass": 1,
+    "subject": 3,
+    "report": ""
+  }
+},
+{
+  "model": "admins.student",
+  "pk": 1,
+  "fields": {
+    "firstname": "Jacob",
+    "lastname": "Nate",
+    "dob": "2004-03-02",
+    "sex": "M",
+    "state": "Abia",
+    "lga": "L.G.A",
+    "hometown": "Hawkins",
+    "residential_address": "Prefer not to say",
+    "image": "student-images/WhatsApp_Image_2023-01-24_at_1.11.05_AM_3.jpeg",
+    "guardianname": "Mr James Nate",
+    "guardianphonenumber": "09054949494",
+    "guardianemail": "jacobnate@gmail.com",
+    "klass": 2,
+    "classaverage": null,
+    "classposition": null,
+    "status": false,
+    "subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      14,
+      17,
+      18,
+      19,
+      20,
+      21,
+      23,
+      25,
+      26
+    ]
+  }
+},
+{
+  "model": "admins.student",
+  "pk": 2,
+  "fields": {
+    "firstname": "Gabriel",
+    "lastname": "Adamms",
+    "dob": "2004-02-03",
+    "sex": "M",
+    "state": "Enugu",
+    "lga": "Nsukka",
+    "hometown": "Walkii",
+    "residential_address": "Prefer not to say",
+    "image": "",
+    "guardianname": "Mr Jacob Dion",
+    "guardianphonenumber": "08156548545",
+    "guardianemail": "job@gmail.com",
+    "klass": 2,
+    "classaverage": null,
+    "classposition": null,
+    "status": false,
+    "subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      25,
+      26
+    ]
+  }
+},
+{
+  "model": "admins.student",
+  "pk": 3,
+  "fields": {
+    "firstname": "Job",
+    "lastname": "Caleb",
+    "dob": "2004-03-02",
+    "sex": "M",
+    "state": "Nassarawa",
+    "lga": "jakande",
+    "hometown": "Ikota",
+    "residential_address": "Prefer not to say",
+    "image": "",
+    "guardianname": "Mr James Kaleb",
+    "guardianphonenumber": "08048446546",
+    "guardianemail": "james@gmail.com",
+    "klass": 2,
+    "classaverage": null,
+    "classposition": null,
+    "status": true,
+    "subjects": []
+  }
+},
+{
+  "model": "admins.student",
+  "pk": 4,
+  "fields": {
+    "firstname": "Jack",
+    "lastname": "Griffo",
+    "dob": "2022-10-05",
+    "sex": "M",
+    "state": "Anambra",
+    "lga": "L.G.A",
+    "hometown": "Ihalie",
+    "residential_address": "Behind Federal Housing",
+    "image": "teacher-images/Koala.jpg",
+    "guardianname": "Mr Calvin Griffo",
+    "guardianphonenumber": "09018785562",
+    "guardianemail": "clavingriffome@gmail.com",
+    "klass": 1,
+    "classaverage": null,
+    "classposition": null,
+    "status": false,
+    "subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      14,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      25,
+      26
+    ]
+  }
+},
+{
+  "model": "admins.schedule",
+  "pk": 1,
+  "fields": {
+    "teacher": 1,
+    "description": "Yalogba teaching",
+    "klass": 2,
+    "date": "2022-04-23",
+    "time": "16:29:00"
+  }
+},
+{
+  "model": "admins.schedule",
+  "pk": 2,
+  "fields": {
+    "teacher": 1,
+    "description": "Yalogba teaching",
+    "klass": 2,
+    "date": "2022-04-23",
+    "time": "16:29:00"
+  }
+},
+{
+  "model": "admins.schedule",
+  "pk": 3,
+  "fields": {
+    "teacher": 1,
+    "description": "yababul",
+    "klass": null,
+    "date": "2022-04-28",
+    "time": "15:38:00"
+  }
+},
+{
+  "model": "admins.schedule",
+  "pk": 4,
+  "fields": {
+    "teacher": 1,
+    "description": "Testing today schedule",
+    "klass": null,
+    "date": "2022-04-25",
+    "time": "14:05:00"
+  }
+},
+{
+  "model": "admins.schedule",
+  "pk": 5,
+  "fields": {
+    "teacher": 1,
+    "description": "Testing Second Schedule",
+    "klass": null,
+    "date": "2022-04-25",
+    "time": "11:03:00"
+  }
+},
+{
+  "model": "admins.schedule",
+  "pk": 6,
+  "fields": {
+    "teacher": 1,
+    "description": "Blah on the 23rd",
+    "klass": 1,
+    "date": "2022-04-26",
+    "time": "12:57:00"
+  }
+},
+{
+  "model": "admins.schedule",
+  "pk": 7,
+  "fields": {
+    "teacher": 1,
+    "description": "Teach math at one'oclock",
+    "klass": 2,
+    "date": "2022-04-27",
+    "time": "13:00:00"
+  }
+},
+{
+  "model": "admins.schedule",
+  "pk": 8,
+  "fields": {
+    "teacher": 1,
+    "description": "Finish Admin",
+    "klass": 2,
+    "date": "2022-05-12",
+    "time": "19:30:00"
+  }
+},
+{
+  "model": "admins.schedule",
+  "pk": 9,
+  "fields": {
+    "teacher": 1,
+    "description": "Testing app on 25th",
+    "klass": 2,
+    "date": "2022-04-25",
+    "time": "20:24:00"
+  }
+},
+{
+  "model": "admins.schedule",
+  "pk": 10,
+  "fields": {
+    "teacher": 1,
+    "description": "nknsksnn",
+    "klass": 4,
+    "date": "2022-05-15",
+    "time": "22:00:00"
+  }
+},
+{
+  "model": "admins.event",
+  "pk": 1,
+  "fields": {
+    "name": "Careers Day",
+    "description": "Join us in the year 2022 to show the vision of carrer day",
+    "date": "2022-05-14",
+    "time": "12:00:00"
+  }
+},
+{
+  "model": "admins.event",
+  "pk": 2,
+  "fields": {
+    "name": "Open Day",
+    "description": "These is the day that parents needs to check their student and do all kind of things",
+    "date": "2022-06-30",
+    "time": "12:12:00"
+  }
+},
+{
+  "model": "admins.event",
+  "pk": 3,
+  "fields": {
+    "name": "InterHouse Sport",
+    "description": "Witness all the sporting in one sitting.. our interhouse sport yields a lot of experiences and joy in the sporting and entertaining of student. we would be honored to invite you to our interhouse sport",
+    "date": "2022-06-11",
+    "time": "01:21:00"
+  }
+},
+{
+  "model": "admins.eventimage",
+  "pk": 1,
+  "fields": {
+    "event": 3,
+    "image": "event-images/Koala.jpg"
+  }
+},
+{
+  "model": "admins.eventimage",
+  "pk": 2,
+  "fields": {
+    "event": 3,
+    "image": "event-images/Lighthouse.jpg"
+  }
+},
+{
+  "model": "admins.eventimage",
+  "pk": 3,
+  "fields": {
+    "event": 3,
+    "image": "event-images/Tulips.jpg"
+  }
+},
+{
+  "model": "admins.upload_assignment",
+  "pk": 1,
+  "fields": {
+    "name": "Sylabbus JSS - 1",
+    "staff": [
+      1
+    ]
+  }
+},
+{
+  "model": "admins.uploads",
+  "pk": 1,
+  "fields": {
+    "staff": 1,
+    "klass": null,
+    "description": "finished all my works from Josh Kay",
+    "document": "uploads/Class_list_for_COS_439.pdf",
+    "section": 1,
+    "sent_on": "2023-01-28T16:16:23.400Z"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 6,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 6,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 6,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 6,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add class",
+    "content_type": 7,
+    "codename": "add_class"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change class",
+    "content_type": 7,
+    "codename": "change_class"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete class",
+    "content_type": 7,
+    "codename": "delete_class"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view class",
+    "content_type": 7,
+    "codename": "view_class"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add event",
+    "content_type": 8,
+    "codename": "add_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change event",
+    "content_type": 8,
+    "codename": "change_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete event",
+    "content_type": 8,
+    "codename": "delete_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view event",
+    "content_type": 8,
+    "codename": "view_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add site setting",
+    "content_type": 9,
+    "codename": "add_sitesetting"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change site setting",
+    "content_type": 9,
+    "codename": "change_sitesetting"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete site setting",
+    "content_type": 9,
+    "codename": "delete_sitesetting"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view site setting",
+    "content_type": 9,
+    "codename": "view_sitesetting"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add subject",
+    "content_type": 10,
+    "codename": "add_subject"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change subject",
+    "content_type": 10,
+    "codename": "change_subject"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete subject",
+    "content_type": 10,
+    "codename": "delete_subject"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view subject",
+    "content_type": 10,
+    "codename": "view_subject"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add teacher programme",
+    "content_type": 11,
+    "codename": "add_teacherprogramme"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change teacher programme",
+    "content_type": 11,
+    "codename": "change_teacherprogramme"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete teacher programme",
+    "content_type": 11,
+    "codename": "delete_teacherprogramme"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view teacher programme",
+    "content_type": 11,
+    "codename": "view_teacherprogramme"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add student",
+    "content_type": 12,
+    "codename": "add_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change student",
+    "content_type": 12,
+    "codename": "change_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete student",
+    "content_type": 12,
+    "codename": "delete_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view student",
+    "content_type": 12,
+    "codename": "view_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add staff",
+    "content_type": 13,
+    "codename": "add_staff"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change staff",
+    "content_type": 13,
+    "codename": "change_staff"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete staff",
+    "content_type": 13,
+    "codename": "delete_staff"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view staff",
+    "content_type": 13,
+    "codename": "view_staff"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add schedule",
+    "content_type": 14,
+    "codename": "add_schedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change schedule",
+    "content_type": 14,
+    "codename": "change_schedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete schedule",
+    "content_type": 14,
+    "codename": "delete_schedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view schedule",
+    "content_type": 14,
+    "codename": "view_schedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add mail",
+    "content_type": 15,
+    "codename": "add_mail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change mail",
+    "content_type": 15,
+    "codename": "change_mail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete mail",
+    "content_type": 15,
+    "codename": "delete_mail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view mail",
+    "content_type": 15,
+    "codename": "view_mail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add event image",
+    "content_type": 16,
+    "codename": "add_eventimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change event image",
+    "content_type": 16,
+    "codename": "change_eventimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete event image",
+    "content_type": 16,
+    "codename": "delete_eventimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view event image",
+    "content_type": 16,
+    "codename": "view_eventimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add admin",
+    "content_type": 17,
+    "codename": "add_admin"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change admin",
+    "content_type": 17,
+    "codename": "change_admin"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete admin",
+    "content_type": 17,
+    "codename": "delete_admin"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view admin",
+    "content_type": 17,
+    "codename": "view_admin"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add upload_ assignment",
+    "content_type": 18,
+    "codename": "add_upload_assignment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change upload_ assignment",
+    "content_type": 18,
+    "codename": "change_upload_assignment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete upload_ assignment",
+    "content_type": 18,
+    "codename": "delete_upload_assignment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view upload_ assignment",
+    "content_type": 18,
+    "codename": "view_upload_assignment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add uploads",
+    "content_type": 19,
+    "codename": "add_uploads"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change uploads",
+    "content_type": 19,
+    "codename": "change_uploads"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete uploads",
+    "content_type": 19,
+    "codename": "delete_uploads"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view uploads",
+    "content_type": 19,
+    "codename": "view_uploads"
+  }
+},
+{
+  "model": "admins.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$0pOF1W4QaC6m$5AMRwhP4Y3iN2u9ciHWgZiDq31weNA7usZcgNexi8kA=",
+    "last_login": "2023-03-10T05:31:10.426Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-04-20T08:49:47Z",
+    "email": "jaykay@gmail.com",
+    "is_teacher": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admins.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$mqwGpSyUa5yR$gpm4PzHk2/rEkRiWI8OqGdyQu1NB0K3M0Fvj8ExMPnE=",
+    "last_login": "2022-05-18T21:55:16.426Z",
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-04-22T15:09:48Z",
+    "email": "Kaluchibuikem11@gmail.com",
+    "is_teacher": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admins.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$BJkfP4wivPhY$znR8WM5bxfh4l2yfnsQEMTNiK76FN3R+hmV2Fn9oHWY=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-05-15T21:03:42.826Z",
+    "email": "jankoby@gmail.com",
+    "is_teacher": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admins.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$yLKpMKkaXYnP$dRRyAQxkFRkTbuwswquMmdjjzFboyQsNFkDp9jdQ/t8=",
+    "last_login": "2022-05-15T21:32:05.224Z",
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": false,
+    "date_joined": "2022-05-15T21:30:17.277Z",
+    "email": "janko@gmail.com",
+    "is_teacher": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admins.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$3I8EFrRfkxlu$5Lq8ZPMpoxQtgvslcfVzivOQsDySSPqBO4TIt4Z1Css=",
+    "last_login": "2022-05-15T21:52:43.067Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-05-15T21:51:33.108Z",
+    "email": "joshokayz@gmail.com",
+    "is_teacher": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admins.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$Tf7Z7fWRZBmV$A7G3YjrcGqYzo70vz8JvY86ivgbhb3aovDFzAUSP4Eg=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-05-18T23:54:30.879Z",
+    "email": "jankocaleb@gmail.com",
+    "is_teacher": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admins.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$iQ2TEjNUGBSK$cYcqs8cZR+MxX9udhIPQv1tAhwRg4Vp1qGgYzjxMM0w=",
+    "last_login": "2023-01-28T10:56:54.770Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-01-28T10:55:25.240Z",
+    "email": "jasper@gmail.com",
+    "is_teacher": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admins.admin",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "firstname": "Josh",
+    "lastname": "Kay",
+    "image": "admin-images/Lighthouse.jpg",
+    "phonenumber": "09015884566"
+  }
+},
+{
+  "model": "admins.admin",
+  "pk": 2,
+  "fields": {
+    "user": 6,
+    "firstname": "Caleb",
+    "lastname": "Jacob",
+    "image": "",
+    "phonenumber": "08156585654"
+  }
+},
+{
+  "model": "admins.staff",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "firstname": "Josh",
+    "lastname": "Kay",
+    "dob": "1989-12-04",
+    "sex": "M",
+    "phonenumber": "09045545857",
+    "state": "Enugu",
+    "lga": "Nsukka",
+    "hometown": "Obolafo",
+    "residential_address": "",
+    "image": "teacher-images/IMG_20230126_172829_974.jpg",
+    "accountnumber": "",
+    "accountname": "",
+    "bank": "",
+    "staff_type": "t",
+    "status": false,
+    "position": "Maths Teacher",
+    "programme": [
+      1,
+      7,
+      8
+    ]
+  }
+},
+{
+  "model": "admins.staff",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "firstname": "Kalu",
+    "lastname": "Chibuikem",
+    "dob": "2004-03-02",
+    "sex": "M",
+    "phonenumber": "09054849494",
+    "state": "Abia",
+    "lga": "Ohafia",
+    "hometown": "Ofoile",
+    "residential_address": "Prefer not to say",
+    "image": "",
+    "accountnumber": "",
+    "accountname": "",
+    "bank": "",
+    "staff_type": "t",
+    "status": true,
+    "position": "Math Teacher",
+    "programme": [
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "admins.staff",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "firstname": "Katty",
+    "lastname": "Katty",
+    "dob": "2022-04-05",
+    "sex": "F",
+    "phonenumber": "09165852355",
+    "state": "Gombe",
+    "lga": "L.G.A",
+    "hometown": "Kannauel",
+    "residential_address": "Prefer not to say",
+    "image": "",
+    "accountnumber": "",
+    "accountname": "",
+    "bank": "",
+    "staff_type": "t",
+    "status": true,
+    "position": "Computer Teacher",
+    "programme": []
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 1,
+  "fields": {
+    "_from": 2,
+    "to": null,
+    "subject": "Testing Mail",
+    "message": "lorem iposum lorem ipsikn ojsos sojsojss osjsosnd chbz xibasl hdilfju dk;sdfhdnasl hdhgdi dhdslsayuddy aIDS",
+    "attachment": "",
+    "read": true,
+    "flag": "i",
+    "date": "2022-04-22",
+    "time": "16:16:12.948"
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 2,
+  "fields": {
+    "_from": 2,
+    "to": null,
+    "subject": "I Have a Job for You",
+    "message": "I have a job for you and the pay is 200000. if you are interested, come to my office from 2 to 4pm on may 1st. Have a nice day",
+    "attachment": "",
+    "read": true,
+    "flag": "i",
+    "date": "2022-04-26",
+    "time": "13:37:52.652"
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 3,
+  "fields": {
+    "_from": 1,
+    "to": 2,
+    "subject": "Testing Mail Interface",
+    "message": "Testing the frontend mail interface... if u see this mail, then it worked",
+    "attachment": "",
+    "read": false,
+    "flag": "i",
+    "date": "2022-05-15",
+    "time": "16:43:03.882"
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 4,
+  "fields": {
+    "_from": 1,
+    "to": 1,
+    "subject": "Update and Fixed the mail Interface",
+    "message": "I have fixed the mail interface",
+    "attachment": "",
+    "read": true,
+    "flag": "i",
+    "date": "2022-05-15",
+    "time": "16:45:42.942"
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 5,
+  "fields": {
+    "_from": 1,
+    "to": 2,
+    "subject": "Update and Fixed the mail Interface",
+    "message": "I have fixed the mail interface",
+    "attachment": "",
+    "read": false,
+    "flag": "i",
+    "date": "2022-05-15",
+    "time": "16:45:43.150"
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 6,
+  "fields": {
+    "_from": 1,
+    "to": 3,
+    "subject": "Game",
+    "message": "Testing Attachments",
+    "attachment": "",
+    "read": false,
+    "flag": "i",
+    "date": "2022-05-17",
+    "time": "11:24:39.382"
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 7,
+  "fields": {
+    "_from": 1,
+    "to": 4,
+    "subject": "Game",
+    "message": "Testing Attachments",
+    "attachment": "",
+    "read": false,
+    "flag": "i",
+    "date": "2022-05-17",
+    "time": "11:24:39.596"
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 8,
+  "fields": {
+    "_from": 1,
+    "to": 1,
+    "subject": "Testing Attachment",
+    "message": "This is the attachment for the file",
+    "attachment": "",
+    "read": true,
+    "flag": "i",
+    "date": "2022-05-17",
+    "time": "11:28:21.300"
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 9,
+  "fields": {
+    "_from": 1,
+    "to": 1,
+    "subject": "Testing Multipart attachment",
+    "message": "The image below should be sent",
+    "attachment": "mail/Lighthouse.jpg",
+    "read": true,
+    "flag": "i",
+    "date": "2022-05-17",
+    "time": "11:33:00.337"
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 10,
+  "fields": {
+    "_from": 1,
+    "to": 2,
+    "subject": "Testing Multipart attachment",
+    "message": "The image below should be sent",
+    "attachment": "mail/Lighthouse_5rSFbB0.jpg",
+    "read": false,
+    "flag": "i",
+    "date": "2022-05-17",
+    "time": "11:33:00.684"
+  }
+},
+{
+  "model": "admins.mail",
+  "pk": 11,
+  "fields": {
+    "_from": 1,
+    "to": 3,
+    "subject": "Testing Multipart attachment",
+    "message": "The image below should be sent",
+    "attachment": "mail/Lighthouse_szLEI8o.jpg",
+    "read": false,
+    "flag": "i",
+    "date": "2022-05-17",
+    "time": "11:33:00.960"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-04-20T08:58:06.411Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "Josh Kay",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-04-20T09:02:24.711Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "JSS1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-04-20T09:02:40.698Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "JSS 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-04-20T09:02:52.730Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "JSS 1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-04-20T09:03:09.629Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "JSS 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-04-20T09:03:58.232Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "JSS 3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-04-20T09:28:08.185Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Josh Kay",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-04-20T09:31:08.614Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "jaykay@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"is_teacher\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-04-21T08:52:17.016Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Mathematics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-04-21T08:52:38.192Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "English",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-04-21T08:53:13.018Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Cultural and Creative Art",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-04-21T10:51:16.072Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "JSS 2 - English",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-04-21T10:51:32.230Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "JSS 1 - Mathematics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-04-21T10:51:42.800Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Josh Kay",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"programme\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-04-21T13:04:18.669Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "JSS 2 - Cultural and Creative Art",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-04-21T13:04:52.178Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Josh Kay",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"programme\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2022-04-21T13:38:21.894Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "JSS 2 - Mathematics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2022-04-21T15:09:20.702Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Jacob Nate",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-04-22T12:16:47.364Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Liam Dion",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-04-22T13:04:36.761Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Job Caleb",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-04-22T15:09:48.689Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Kaluchibuikem11@gmail.com",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2022-04-22T15:12:24.214Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Kaluchibuikem11@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"is_teacher\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2022-04-22T15:14:01.847Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Kalu Chibuikem",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2022-04-22T15:16:12.953Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Testing Mail",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2022-04-23T14:34:33.468Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "3",
+    "object_repr": "Josh Kay",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"_class\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2022-04-26T11:18:18.885Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Testing Mail",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"to\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2022-04-26T12:37:52.676Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "I Have a Job for You",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2022-05-09T09:19:13.098Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Kaluchibuikem11@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2022-05-09T09:23:37.133Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Kalu Chibuikem",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"programme\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2022-05-14T09:00:18.747Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Careers Day",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2022-05-14T09:03:28.998Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "JSS 3",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2022-05-14T09:03:59.695Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "JSS 3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"subject\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2022-05-14T09:17:55.789Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "JSS 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"subject\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2022-05-14T09:18:20.364Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "JSS 1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"classteacher\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2022-05-14T09:19:32.275Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Computer Science",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2022-05-15T21:53:03.838Z",
+    "user": 5,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "jaykay@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"is_active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2022-05-18T22:39:02.883Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "jaykay@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2022-05-18T22:39:59.227Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "jaykay@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2023-01-28T10:57:21.315Z",
+    "user": 7,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "jaykay@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"is_active\"]}}]"
+  }
+}
+]

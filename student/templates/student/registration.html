@@ -1,0 +1,63 @@
+{% extends 'student/base.html' %}
+{% load static %}
+{% block title %} Registration {% endblock %}
+{% block content %}
+      <!-- content features -->
+      <div class="staff-items">
+        <!-- staff -->
+        <div class="search-filter">
+          <h1 class="header text-center">All your Registration</h1>
+        </div>
+      </div>
+      <!-- table data -->
+      <div class="box table-box p-4">
+        {% if object_list %}
+        <table class="style-table">
+          <thead>
+            <tr>
+              <th>Registration</th>
+              <th>Completion Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for object in object_list %}
+                      <tr>
+                            <td>
+                                <a href="#" class="table-link">
+                                    
+                                    {{object.name}}
+                                </a>
+                                
+                            </td>
+                            <td>
+                                {% if object.completed %}
+                                Completed
+                                {% else %}
+                                Not Completed
+                                {% endif %}
+                            </td>
+                        
+            
+                        </tr>
+            {% endfor %}
+            
+          </tbody>
+        </table>
+      {% else %}
+      <div class="no-item">
+        <p>No Registration</p>
+      </div>
+      {% endif%}
+      </div>
+{% endblock %}
+{% block extrascript %}
+<!-- <script>
+  var form = document.getElementById('filter-form')
+  var filterItems = document.getElementsByClassName('filter-items')
+  for(var items of filterItems){
+    items.onchange = function(){
+      form.submit()
+    }
+  }
+</script> -->
+{% endblock %}

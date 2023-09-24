@@ -1,0 +1,97 @@
+{% extends 'admins/base.html' %}
+{% load static %}
+{% load path_checker %}
+{% block title %} Add Admin {% endblock %}
+{% block extrastyle %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+{% block content %}
+        <div class="pad-container pt-4">
+          <div class="pt-4">
+            <h2 class="header flex-center">Add Admin</h2>
+          </div>
+          
+        <div class="flex-center page-box">
+            <div class="large-form-box">
+                <div class="form-header">
+                    Fill the Form
+                </div>
+                <form action="" method="POST" class="mb-4">
+                    {% csrf_token %}
+                    {{form.errors|default:''}}
+                    <div class="boot-row mb-4">
+                        <div class="col-6">
+                            <img src="" alt="" class="detail-profile-image" style="width: 100px; height: 100px;">
+                        </div>
+                        <div class="form-group col-6">
+                            <button class="site-button" type="button" id="image-button">
+                            <i class="fa fa-upload"></i> Upload Profile Picture
+                        </button>
+                        <input type="file" name="image" accept="image/*" hidden id="image-file-button">
+                        <span class="small-text" id="image-text"></span>
+                        <span class="error-msg small-text">{{form.image.errors|default:''}}</span>
+                        </div>
+                        
+                    </div>
+                    <div class="boot-row mb-4"> <div class="side-form-group col-6 ">
+                        <input type="text" name="firstname" class="form-control" placeholder=" " value="{{form.firstname.value|default:''}}" required>
+                        <label> First Name* </label>
+                        {% if form.firstname.errors %}
+                            <span class="error-msg small-text">{{form.firstname.errors}}</span>
+                        {% endif %}
+                    </div>
+                    <div class="side-form-group col-6">
+                        <input type="text" class="form-control" name="lastname" placeholder=" " value="{{form.lastname.value|default:''}}" required>
+                        <label> Last Name* </label>
+                        {% if form.lastname.errors %}
+                            <span class="error-msg small-text">{{form.lastname.errors}}</span>
+                        {% endif %}
+                    </div></div>
+                
+                    <div class="form-group mb-4">
+                        <input type="tel" class="form-control" name="phonenumber" value="{{form.phonenumber.value|default:''}}" placeholder=" " required>
+                        <label> Phone Number* </label>
+                        {% if form.phonenumber.errors %}
+                          <span class="error-msg">{{form.phonenumber.errors}}</span>
+                      {% endif %}
+                    </div>
+                    
+                    <div class="" id="teaching_box">
+                      <div class="form-group mb-4">
+                        <input type="email" name="email" class="form-control" value="{{form.email.value|default:''}}" placeholder=" " required>
+                        <label> Email*</label>
+                        {% if form.email.errors %}
+                            <span class="error-msg">{{form.email.errors}}</span>
+                        {% endif %}
+                      </div>
+                             <div class="boot-row mb-4"> <div class="side-form-group col-6 ">
+                                <input type="password" name="password"value="{{form.password.value|default:''}}" class="form-control" placeholder=" " required>
+                                <label> Password*</label>
+                                <span class="error-msg small-text">{{form.password.errors|default:''}}</span>
+                            </div>
+                            <div class="side-form-group col-6">
+                                <input type="password" name="password2" value="{{form.password2.value|default:''}}" class="form-control" placeholder=" " required>
+                                <label> Confirm Password* </label>
+                                <span class="error-msg small-text">{{form.password2.errors|default:''}}</span>
+                            </div></div>   
+                        
+                    </div>
+                    <div class="form-group mb-4">
+                        <label> Role* </label>
+                        <select name="role" id="" class="form-control" style="padding-left: 4px;" required>
+                            <option value="">Select a Role*</option>
+                            {% for id, x in form.fields.role.choices %}
+                              <option {% if form.role.value == id %}selected{% endif %} value="{{id}}">{{x}}</option>
+                          {% endfor %}
+                        </select> 
+                        <span class="error-msg small-text">{{form.role.errors|default:''}}</span>
+                    </div>
+                    <div class="form-group flex-center">
+                        <input type="submit" value="Submit" class="site-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

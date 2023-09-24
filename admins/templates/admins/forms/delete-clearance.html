@@ -1,0 +1,34 @@
+{% extends 'admins/base.html' %}
+{% load static %}
+{% load path_checker %}
+{% block title %} Delete Clearance {% endblock %}
+{% block content %}
+        <div class="pad-container pt-4">
+          <div class="pt-4">
+            <h2 class="header flex-center">Delete Clearance |{{objact.name}} </h2>
+          </div>
+          
+        <div class="flex-center page-box">
+            <div class="large-form-box">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="boot-row">
+                            <div class="col-6">Clearance Name:</div>
+                            <div class="col-6">{{object.name}}</div>
+                        </div>
+                        <div class="boot-row mb-4">
+                            <div class="col-6">Cleared Students Number:</div>
+                            <div class="col-6">{{object.cleared_students.count}}</div>
+                        </div>
+                        <div class="mb-4" >
+                            <p>Are You Sure you want to delete this Clearance?</p>
+                            <p class="small-text">This action is not reversable and highly risky</p>
+                        </div>
+                        <div class="flex-between pe-2">
+                            <input type="submit" value="Yes, Delete Clearance" class="site-button">
+                            <a href="{% url 'admins:clearance-details' object.id %}" class="site-button">No, Take me back</a>
+                        </div>
+                    </form>
+            </div>
+    </div>
+{% endblock %}

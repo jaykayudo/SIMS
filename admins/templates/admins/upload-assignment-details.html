@@ -1,0 +1,22 @@
+{% extends 'admins/base.html' %}
+{% load path_checker %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}  
+  <div >
+  <a href="{% url 'admins:uploads-assignment' %}" class="back-button large-text">
+      <i class="fas fa-arrow-left"></i>
+  </a>
+  </div>
+        <div class="pad-container pt-4">          
+        <div class="flex-center page-box">
+            <div class="large-form-box" style="padding: 20px;">
+                <h2 class="pb-4">{{object.name}}</h2>
+                <ul style="padding-left: 20px;">
+                    {% for x in object.staff.all %}
+                    <li>{{x.firstname}} {{x.lastname}} - {{x.position}}</li>
+                    {% endfor %}
+                </ul> 
+            </div>
+        </div>
+    </div>
+{% endblock %}

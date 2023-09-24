@@ -1,0 +1,48 @@
+{% extends 'admins/base.html' %}
+{% load path_checker %}
+{% block title %} Create Upload Assignment {% endblock %}
+{% block content %}  
+  <div >
+  <a href="{% url 'admins:uploads-assignment' %}" class="back-button large-text">
+      <i class="fas fa-arrow-left"></i>
+  </a>
+  </div>
+        <div class="pad-container pt-4">
+          <div class="pt-4">
+            <h2 class="header flex-center">Create Upload Assignment</h2>
+          </div>
+          
+        <div class="flex-center page-box">
+            <div class="large-form-box">
+                <div class="form-header">
+                    Fill the Form
+                </div>
+                <form action="" method="POST" class="mb-4">
+                   {% csrf_token %}
+                    <div class="form-group mb-4">
+                        <!-- {{form.name}} -->
+                        <input type="text" name="name" value="{{form.name.value|default:''}}" class="form-control" placeholder=" " required>
+                        <label>{{form.name.label}}*</label>
+                        {% if form.name.errors %}
+                        <span class="error-msg">{{form.name.errors}}</span>
+                        {% endif %}
+                    </div>
+                    <div class="form-group mb-4">
+                        {{form.staff.label}}*
+                        {{form.staff}}
+                        <!-- {{form.subject}} -->
+                        <span class="small-text">Hold ctrl and click to select multiple options</span>
+                        {% if form.staff.errors %}
+                        <span class="error-msg small-text">{{form.subject.errors}}</span>
+                        {% endif %}
+                    </div>                 
+                    <div class="form-group flex-center">
+                        <button class="site-button" type="submit">
+                            <i class="fas fa-plus"></i>&nbsp;Create
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

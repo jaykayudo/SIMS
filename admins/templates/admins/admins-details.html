@@ -1,0 +1,48 @@
+{% extends 'admins/base.html' %}
+{% load static %}
+{% block title %} Admin Details {% endblock %}
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'staff/apis/smart.default.css' %}" />
+{% endblock %}
+{% block content %}
+        <div class="pad-container pt-4">
+          <div class="content-nav">
+            <h2 class="header">Admin Information</h2>
+            
+            <div class="nav-link-add">
+              <a href="{% url 'admins:staff-password-reset' object.id %}" class="nav-icon-add">Reset Password</a>
+              {% if not object.user.is_superuser %}
+              <a href="{% url 'admins:admins-toggle' object.id %}" class="nav-icon-add">{% if object.status %}Block Admin{% else %}Activate Admin{% endif %}</a>
+              <a href="{% url 'admins:staff-delete' object.id %}" class="nav-icon-add">
+                Admin Staff
+              </a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="row-6">
+            <div class="column-6">
+                <div class="box">
+                   {% if object.image %}
+                        <img src="{{ object.image.url}}" class="detail-profile-image">
+                    {% else %}
+                    {% if object.sex == 'M'%}
+                        <img src="{% static 'staff/images/male-placeholder.png' %}" class="detail-profile-image">
+                    {% else %}
+                        <img src="{% static 'staff/images/female-placeholder.png' %}" class="detail-profile-image">
+                    {% endif %}
+                    {% endif %}
+
+                    <ul class="detail-content line-height-small">
+                        <li><strong>Name of Admin:</strong> {{object.firstname}} {{object.lastname}}</li>
+                        <li><strong>Email:</strong>{{object.user.email}}</li>
+                        <li><strong>Phone Number:</strong> {{object.phonenumber}}</li>
+                        <li><strong>role:</strong> {{object.get_role_display}}</li>
+                        <!-- <li><strong>Residential Address:</strong> Omorinre Johnson Street, Lekki Phase 1,Lagos</li> -->
+                       
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+{% endblock %}

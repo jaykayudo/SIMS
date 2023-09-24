@@ -1,0 +1,90 @@
+{% extends 'admins/base.html' %}
+{% load static %}
+{% block title %} Uploads Assignment {% endblock %}
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'staff/apis/smart.default.css' %}" />
+{% endblock %}
+{% block content %}
+        <div class="content-nav">
+          <h2 class="greetings">Uploads Assignment</h2>
+          <!-- nav btn -->
+          <div class="nav-link-add">
+            <a href="{% url 'admins:uploads'%}" class="nav-icon-cancel">Uploads</a>
+            <a href="{% url 'admins:uploads-assignment'%}" class="nav-icon-save">Uploads Assignment</a>
+          </div>
+          <a href="{% url 'admins:uploads-assignment-create' %}" class="content-nav-link">
+            <span class="nav-icon">
+              <i class="fa fa-upload"></i><i class="fas fa-plus"></i>
+            </span>
+          </a>
+        </div>
+
+        <!-- content features -->
+
+        <div class="inbox-items">
+          <!-- messages -->
+          <div class="messages">
+            <div class="content-scroll-up">
+                {% for object in page_obj %}
+                <div class="content-sub-inbox">
+                    <a href="{% url 'admins:uploads-assignment-details' object.pk %}" class="content-subject-up">{{object.name}}:</a>
+    
+                    <footer class="flex-end small-text">
+                      <span><i class="fas fa-clock"></i>{{object.sent_on}}</span>&nbsp;&nbsp;
+                    </footer>
+                    <!-- dropdown -->
+                  </div>
+                {% empty %}
+                <div class="no-item">
+                    <p>No Recieved Uploads Assignments</p>
+                </div>
+                {% endfor %}
+                
+            </div>
+            {% if page_obj %}
+                <div class="flex-center">
+                    <ul class="paginator">
+                        {% if page_obj.has_previous %}
+                            <li class="page-item"><a class="page-link" ><span>&laquo;</span></a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{page_obj.previous_page_number}}">{{page_obj.previous_page_number}}</a>
+                            </li>
+                            {% else %}
+                            <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true"><span>&laquo;</span></a></li>
+                        {% endif %}
+                        
+                        {% for pagenum in page_obj.paginator.page_range %}
+                        {% if page_obj.number == pagenum %}
+                            <li class="page-item{% if page_obj.number == pagenum %} active{% endif %}">
+                                <a class="page-link" href="?page={{pagenum}}">{{pagenum}}</a>
+                            </li>
+                        {% endif %}
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                            <li class="page-item"><a class="page-link" href="?}page={{page_obj.next_page_number}}">{{page_obj.next_page_number}}</a></li>
+                            <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number}}"><span>&raquo;</span></a></li>
+                        {% else %}
+                            <li class="page-item disabled"><a class="page-link" href="#" ><span>&raquo;</span></a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            {% endif %}
+          </div>
+          <!-- calendar -->
+          <div class="calendar">
+            <smart-calendar id="calander"></smart-calendar>
+          </div>
+        </div>
+{% endblock %}
+{% block extrascript %}
+<script type="module" src="{% static 'staff/apis/smart.calendar.js' %}"></script>
+<script>
+    window.onload = function(){
+    Smart('#calendar', class {
+    get properties() {
+        return {"selectedDates":[new Date(),"2022-7-17"]}
+    }
+  });
+    };
+</script>
+{% endblock %}

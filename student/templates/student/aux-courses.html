@@ -1,0 +1,69 @@
+{% extends 'student/base.html' %}
+{% load static %}
+{% block title %} Add Auxillary Courses {% endblock %}
+{% block content %}
+<div>
+        <div class="pad-container pt-4">
+            <div class="pt-4">
+              <h2 class="header flex-center">Add Auxillary Course</h2>
+            </div>
+            <form action="" method="POST" class="mb-4">
+            <div>
+                <ul class="unstyle">
+                    <li><strong>Name of Student:</strong> {{request.user.student.firstname}} {{request.user.student.middlename}} {{request.user.student.lastname}}</li>
+                    <li><strong>Department:</strong> {{request.department}}</li>
+                </ul>
+            </div>
+          <div class="flex-center page-box">
+              <div class="large-form-box">
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Session</th>
+                                    <th>Unit</th>
+                                    <th>Course Code</th>
+                                    <th>Course Title</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for course in courses %}
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" name="courses" value="{{course.course__id}}">
+                                        </td>
+                                        <td>
+                                            {{session}}
+                                        </td>
+                                        <td>
+                                            <input type="hidden" name="units" value="{{course.unit}}">{{course.unit}}
+                                        </td>
+                                        <td>
+                                            {{course.course__code}}
+                                        </td>
+                                        <td>
+                                            {{course.course__title}}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+        
+                            </tbody>
+                        </table>
+                            
+                            <div class="flex-center">
+                                <button class="site-button" type="submit">
+                                        <i class="fas fa-plus"></i>&nbsp;Add to Course Registration
+                                </button>
+                            </div>
+                         
+                      </div>
+              </div>
+            
+        </div>
+        </form>
+        </div>
+</div>
+{% endblock %}

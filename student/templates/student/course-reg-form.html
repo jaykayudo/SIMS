@@ -1,0 +1,77 @@
+{% extends 'student/base.html' %}
+{% load static %}
+{% block title %} Register Courses {% endblock %}
+{% block content %}
+<div>
+        <div class="pad-container pt-4">
+            <div class="pt-4">
+              <h2 class="header flex-center">Course Registration</h2>
+            </div>
+            <form action="" method="POST" class="mb-4">
+            <div>
+                <ul class="unstyle">
+                    <li><strong>Name of Student:</strong> {{request.user.student.firstname}} {{request.user.student.middlename}} {{request.user.student.lastname}}</li>
+                    <li><strong>Department:</strong> {{request.department}}</li>
+                    <li><strong>Level:</strong> <input type="hidden" name="level" value="{{level}}" >{{level}}00 Level</li>
+                    <li><strong>Semester:</strong> <input type="hidden" name="semester" value="{{semester}}" >{{semester}}</li>
+                    <li><strong>Session:</strong> <input type="hidden" name="session" value="{{session}}" >{{session}}</li>
+                    <li><strong>Minimum Units:</strong> {{min_unit}}</li>
+                    <li><strong>Maximum Units:</strong> {{max_unit}}</li>
+                </ul>
+                <p class="text-center">
+                    Click <a href="{% url 'student:add-aux-courses' %}">Here</a> to Add Auxillary Courses
+                </p>
+            </div>
+          <div class="flex-center page-box">
+              <div class="large-form-box">
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Session</th>
+                                    <th>Unit</th>
+                                    <th>Course Code</th>
+                                    <th>Course Title</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for course in courses %}
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" name="courses" value="{{course.course__id}}">
+                                        </td>
+                                        <td>
+                                            {{session}}
+                                        </td>
+                                        <td>
+                                            <input type="hidden" name="units" value="{{course.unit}}">{{course.unit}}
+                                        </td>
+                                        <td>
+                                            {{course.course__code}}
+                                        </td>
+                                        <td>
+                                            {{course.course__title}}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+        
+                            </tbody>
+                        </table>
+                            
+                            <div class="flex-center">
+                                <button class="site-button" type="submit">
+                                        <i class="fas fa-plus"></i>&nbsp;Register
+                                </button>
+                            </div>
+                         
+                      </div>
+              </div>
+            
+        </div>
+        </form>
+        </div>
+</div>
+{% endblock %}

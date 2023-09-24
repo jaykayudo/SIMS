@@ -1,0 +1,113 @@
+{% extends 'admins/base.html' %}
+{% load path_checker %}
+{% block title %} {{title}} {% endblock %}
+{% block content %} 
+        <div class="pad-container pt-4">
+          <div class="pt-4">
+            <h2 class="header flex-center">{{title}}</h2>
+          </div>
+          
+        <div class="flex-center page-box">
+            <div class="large-form-box">
+                <div class="form-header">
+                    Fill the Form
+                </div>
+                <form action="" class="mb-4" method="POST" enctype="multipart/form-data">
+                    {% csrf_token%}
+                    <div class="form-group mb-4">
+                        <input type="text" class="form-control" name="name" value="{{form.name.value|default:''}}" placeholder=" " required>
+                        <label>{{form.name.label}} of Event</label>
+                        {% if form.name.errors %}
+                            <span class="error-msg">{{form.name.errors}}</span>
+                        {% endif %}        
+                    </div>
+                
+                     <div class="form-group mb-4">
+                        <label>{{form.description.label}} of Event</label>
+                        <textarea name="description" class="form-control" cols="30" rows="10">{{form.description.value|default:''}}</textarea>
+                        {% if form.description.errors %}
+                            <span class="error-msg">{{form.description.errors}}</span>
+                        {% endif %}
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="">Department*</label>
+                          <select name="department" id="" class="form-control" style="padding-left: 4px;" required>
+                              <option value="">Select a Department</option>
+                              {% for id, x in form.fields.department.choices %}
+                                <option {% if form.department.value == id %}selected{% endif %} value="{{id}}">{{x}}</option>
+                            {% endfor %}
+                          </select> 
+                          {% if form.department.errors %}
+                          <span class="error-msg">{{form.department.errors}}</span>
+                          {% endif %}
+                          <div class="small-text">Leave blank to select all departments</div>                       
+                    </div>
+                    <div class="boot-row mb-4"> <div class="side-form-group col-6 ">
+                        <label>{{form.startdate.label}}</label>
+                        <input type="date" name="startdate" class="form-control" value="{{form.startdate.value|default:''}}">
+                        {% if form.startdate.errors %}
+                            <span class="error-msg">{{form.startdate.errors}}</span>
+                        {% endif %}
+                      </div>
+                      <div class="side-form-group col-6">
+                        <label>{{form.starttime.label}}</label>
+                        <input type="time" name="starttime" class="form-control" value="{{form.starttime.value|default:''}}">
+                        {% if form.starttime.errors %}
+                            <span class="error-msg">{{form.starttime.errors}}</span>
+                        {% endif %}
+                      </div></div>
+                      <div class="boot-row mb-4"> <div class="side-form-group col-6 ">
+                        <label>{{form.enddate.label}}</label>
+                        <input type="date" name="enddate" class="form-control" value="{{form.enddate.value|default:''}}">
+                        {% if form.enddate.errors %}
+                            <span class="error-msg">{{form.enddate.errors}}</span>
+                        {% endif %}
+                      </div>
+                      <div class="side-form-group col-6">
+                        <label>{{form.endtime.label}}</label>
+                        <input type="time" name="endtime" class="form-control" value="{{form.endtime.value|default:''}}">
+                        {% if form.endtime.errors %}
+                            <span class="error-msg">{{form.endtime.errors}}</span>
+                        {% endif %}
+                      </div></div>
+                      <div class="form-group mb-4">
+                        <label><input type="checkbox" name="attendies_needed" id=""> Attendees needed</label>
+                      </div>
+                    <div class="form-group mb-4">
+                        <button class="site-button" type="button" id="image-button">
+                            <i class="fas fa-upload"></i>&nbsp;Choose Image
+                        </button>
+                        <input type="file" name="image" id="image-file-button" required  hidden accept="image/*">
+                        <br><span class="small-text" id="image-text"></span>
+                    </div>
+                    <div class="form-group flex-center">
+                        <button class="site-button">
+                            <i class="fas fa-plus"></i>&nbsp;{{btn_text}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block extrascript %}
+<script>
+    
+   var imageFileButton = document.getElementById('image-file-button');
+  var imageButton = document.getElementById('image-button');
+  var imageText = document.getElementById('image-text');
+  var state = document.getElementById('state');
+  imageButton.onclick = function(){
+      imageFileButton.click();
+  }
+  imageFileButton.onchange = function(){
+      if(imageFileButton.value != ""){
+          var text = ' '
+          for(var x of imageFileButton.files){
+              text += x.name+ ' '
+          }
+          imageText.textContent = text;
+      }
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'admins/base.html' %}
+{% load static %}
+{% block title %} Department Details {% endblock %}
+{% block content %}
+        <div class="content-nav">
+          <h2 class="greetings">Department of {{object.name}}</h2>
+          <!-- nav btn -->
+          <div class="nav-link-add">
+            <a href="{% url 'admins:department-edit' object.pk %}" class="nav-icon-save">Edit Department</a>
+          </div>
+          <a href="{% url 'admins:department-delete' object.pk %}" title="Delete Faculty" class="content-nav-link">
+            <span class="nav-icon">
+              <i class="fas fa-trash"></i>
+            </span>
+          </a>
+        </div>
+        <div>
+          <ul>
+            <li><strong>HOD:</strong> {{object.head_of_dept}}</li>
+            <li><strong>Number of Students:</strong> {{object.student_set.count}}</li>
+            <li><strong>Number of Staffs:</strong> {{object.staff_set.count}}</li>
+          </ul>
+        </div>
+        <!-- content features -->
+        <div class="box table-box">
+        {% if object.student_set.all %}
+          <table class="style-table">
+            <caption style="text-align:right;">{{object.student_set.count}} Students</caption>
+            <thead>
+              <tr>
+                <th>Student Name</th>
+                <th>Sex</th>
+                <th>Matric Number</th>
+                <th>Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for object in object.student_set.all %}
+                        <tr>
+                            <td>
+                            <a href="{% url 'admins:student-details' object.id %}" class="table-link">
+                                {% if object.image %}
+                                    <img src="{{ object.image.url}}"  class="table-image" >
+                                {% else %}
+                                {% if object.sex == 'M'%}
+                                    <img src="{% static 'staff/images/male-placeholder.png' %}"  class="table-image">
+                                {% else %}
+                                    <img src="{% static 'staff/images/female-placeholder.png' %}"  class="table-image">
+                                {% endif %}
+                                {% endif %}
+                                    
+                                    {{object.firstname}} {{object.lastname}}
+                                </a>
+                                
+                            </td>
+                              <td>
+                                  {{object.get_sex_display}}
+                              </td>
+                              <td>
+                                {{object.matric_number}}
+                              </td>
+                              <td>
+                                  {{object.get_level_display}}
+                              </td>
+              
+                        </tr>
+              {% endfor %}
+              
+            </tbody>
+          </table>
+        {% else %}
+        <div class="no-item">
+          <p>No Student</p>
+        </div>
+        {% endif%}
+        </div>
+        <div class="box table-box">
+          {% if object.staff_set.all %}
+            <table class="style-table">
+              <caption style="text-align:right;">{{object.staff_set.count}} Students</caption>
+              <thead>
+                <tr>
+                  <th>Staff Name</th>
+                  <th>Sex</th>
+                  <th>Email</th>
+                  <th>Department Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for object in object.staff_set.all %}
+                          <tr>
+                            <td>
+                              <a href="{% url 'admins:staff-details' object.id %}" class="table-link">
+                              {% if object.image %}
+                                  <img src="{{ object.image.url}}"  class="table-image" >
+                              {% else %}
+                                {% if object.sex == 'M'%}
+                                    <img src="{% static 'staff/images/male-placeholder.png' %}"  class="table-image">
+                                {% else %}
+                                    <img src="{% static 'staff/images/female-placeholder.png' %}"  class="table-image">
+                                {% endif %}
+                              {% endif %}
+                                  
+                                  {{object.firstname}} {{object.lastname}}
+                              </a>
+                              
+                          </td>
+                          <td>
+                              {{object.get_sex_display}}
+                          </td>
+                          <td>
+                              {{object.user.email}}
+                          </td>
+                          <td>
+                            {{object.get_role_display}}
+                          </td>
+                
+                            </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% else %}
+          <div class="no-item">
+            <p>No Staffs</p>
+          </div>
+          {% endif%}
+          </div>
+        
+
+        
+{% endblock %}

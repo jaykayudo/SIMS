@@ -1,0 +1,94 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+{% load path_checker %}
+{% block content %}
+            <div class="pad-container pt-4">
+                <h2 class="header flex-between">
+                   Class of {{class.name}}
+                   <a href="#" class="site-button small-text"><i class="fa fa-upload"></i> Upload Report</a>
+                </h2>
+                <div class="row-6">
+                    <div class="column-6">
+                        <div class="box">
+                            <div class="detail-profile-image">
+                                {{class.name}}
+                            </div>
+                            <ul class="detail-content">
+                                <li><strong>Class Teacher:</strong> {{class.classteacher}}</li>
+                                <li><strong>Number of Students:</strong> {{class.student_set.count}}</li>
+                                <li><strong>Subject(s) you teach:</strong> {{request.user.staff.programme.all|join:", "}}</li>
+                                <li><strong>Number of Student(s) offering your course(s):</strong>{{offering_students|length}}</li>
+                                <!-- <li><strong>Class Representative:</strong> Mubarak</li> -->
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column-6">
+                        <div class="box">
+                            
+                            <div class="schedule-box scroll-box">
+                                <h3>Activity</h3>
+                                <div class="box-content bg-color">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis natus aut fuga id. Blanditiis doloremque labore delectus recusandae quis. Unde autem veniam eos sit blanditiis! Ab magni rem perferendis! Officiis!
+                                    </p>
+                                    <footer>
+                                        <span><i class="fa-solid fa-calendar-days"></i>&nbsp;4th April, 2022</span>&nbsp;&nbsp;
+                                        <span><i class="fa-solid fa-clock"></i>&nbsp;10:00am</span>
+                                    </footer>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-center" style="text-align: center;">
+                        Student(s) offering your Course
+                    </h3>
+                    <table class="style-table">
+                        <caption>{{offering_students|length}} Student(s)</caption>
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>Sex</th>
+                                <th>Class</th>
+                                <th>Subject</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for object in offering_students %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'staff:student-details' object.id %}" class="table-link">
+                                        {% if object.image %}
+                                        <img src="{{ object.image.url}}"  class="table-image" >
+                                    {% else %}
+                                    {% if object.sex == 'M'%}
+                                        <img src="{% static 'staff/images/male-placeholder.png' %}"  class="table-image">
+                                    {% else %}
+                                        <img src="{% static 'staff/images/female-placeholder.png' %}"  class="table-image">
+                                    {% endif %}
+                                    {% endif %}
+                                        
+                                        {{object.firstname}} {{object.lastname}}
+                                    </a>
+                                    
+                                </td>
+                                <td>
+                                    {{object.get_sex_display}}
+                                </td>
+                                <td>
+                                    {{object|get:"klass"}}
+                                </td>
+                                <td>
+                                    Maths
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    
+                    </table>
+                </div>
+            </div>
+ {% endblock %}

@@ -1,0 +1,3 @@
+python manage.py dumpdata --indent=2 --output=filename.json  (This is for dumping all the data from a database into a file)
+
+python manage.py loaddata filename.json  (This is for loading the dumped data into a new database)

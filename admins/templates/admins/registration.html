@@ -1,0 +1,68 @@
+{% extends 'admins/base.html' %}
+{% load static %}
+{% block title %} Registration {% endblock %}
+{% block content %}
+      <div class="content-nav">
+        <h2 class="greetings">Registrationsa</h2>
+        <a href="{% url 'admins:registration-add-form' %}" class="content-nav-link">
+          <span class="nav-icon">
+            <i class="fas fa-plus"></i>
+          </span>
+        </a>
+      </div>
+      <!-- content features -->
+      <div class="staff-items">
+        <!-- staff -->
+        <div class="search-filter">
+          <h1 class="header text-center">Registration List</h1>
+        </div>
+      </div>
+      <!-- table data -->
+      <div class="box table-box">
+        {% if object_list %}
+        <table class="style-table">
+          <caption style="text-align:right;">{{object_list|length}} Registrations</caption>
+          <thead>
+            <tr>
+              <th>Registration</th>
+              <th>No of Cleared Student</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for object in object_list %}
+                      <tr>
+                            <td>
+                                <a href="{% url 'admins:registration-details' object.id %}" class="table-link">
+                                    
+                                    {{object.name}}
+                                </a>
+                                
+                            </td>
+                            <td>
+                                {{object.cleared_students.count}}
+                            </td>
+                        
+            
+                        </tr>
+            {% endfor %}
+            
+          </tbody>
+        </table>
+      {% else %}
+      <div class="no-item">
+        <p>No Registration</p>
+      </div>
+      {% endif%}
+      </div>
+{% endblock %}
+{% block extrascript %}
+<!-- <script>
+  var form = document.getElementById('filter-form')
+  var filterItems = document.getElementsByClassName('filter-items')
+  for(var items of filterItems){
+    items.onchange = function(){
+      form.submit()
+    }
+  }
+</script> -->
+{% endblock %}

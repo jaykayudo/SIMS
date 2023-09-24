@@ -1,0 +1,67 @@
+{% extends 'admins/base.html' %}
+{% load static %}
+{% block title %} Course Registration for {{object.student.matric_number}} {% endblock %}
+{% block content %}
+<div>
+        <div class="pad-container pt-4">
+            <div class="content-nav">
+                <h2 class="greetings">Course Registration for  {{object.student.matric_number}}</h2>
+                <a href="{% url 'admins:course-reg-add' object.id %}" class="content-nav-link">
+                  <span class="nav-icon">
+                    <i class="fas fa-plus"></i>&nbsp;Add Course
+                  </span>
+                </a>
+              </div>
+            <div>
+                <ul class="unstyle">
+                    <li><strong>Name of Student:</strong> {{object.student.firstname}} {{object.student.middlename}} {{object.student.lastname}}</li>
+                    <li><strong>Department:</strong> {{object.student.department}}</li>
+                    <li><strong>Level:</strong> {{object.get_level_display}}</li>
+                    <li><strong>Semester:</strong> {{object.get_semester_display}}</li>
+                    <li><strong>Session:</strong> {{object.session}}</li>
+                </ul>
+            </div>
+          <div class="flex-center page-box">
+              <div class="large-form-box">
+                      <div class="form-group">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>Session</th>
+                                    <th>Unit</th>
+                                    <th>Course Code</th>
+                                    <th>Course Title</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for course in object.courseregistrationline_set.all %}
+                                    <tr>
+                                        <td>
+                                            {{course.session}}
+                                        </td>
+                                        <td>
+                                           {{course.unit}}
+                                        </td>
+                                        <td>
+                                            {{course.course.code}}
+                                        </td>
+                                        <td>
+                                            {{course.course.title}}
+                                        </td>
+                                        <td>
+                                            <a href="{% url 'admins:course-reg-remove' object.id course.id %}" class="site-button"><i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+        
+                            </tbody>
+                        </table>                     
+                      </div>
+              </div>
+            
+        </div>
+        </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'admins/base.html' %}
+{% load path_checker %}
+{% block title %} Add Cleared Student {% endblock %}
+{% block content %}  
+  <div >
+  <a href="{% url 'admins:clearance' %}" class="back-button large-text">
+      <i class="fas fa-arrow-left"></i>
+  </a>
+  </div>
+        <div class="pad-container pt-4">
+          <div class="pt-4">
+            <h2 class="header flex-center">Add New Cleared Student</h2>
+          </div>
+          
+        <div class="flex-center page-box">
+            <div class="large-form-box">
+                <div class="form-header">
+                    Fill the Form
+                </div>
+                <form action="" method="POST" class="mb-4">
+                    {% csrf_token %}
+                    <div class="form-group mb-4">
+                        <label for="">Student*</label>
+                          <select name="student" id="" class="form-control" style="padding-left: 4px;" required>
+                                <option value="">Select a Student*</option>
+                                {% for x in students %}
+                                <option  value="{{x.id}}">{{x.firstname}} {{x.lastname}} - {{x.matric_number}}</option>
+                                {% endfor %}
+                          </select>                        
+                   
+                    </div>
+                    <div class="form-group flex-center">
+                        <button class="site-button">
+                            <i class="fas fa-plus"></i>&nbsp;Add New Student
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

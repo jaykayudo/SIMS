@@ -1,0 +1,138 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+{% block title %}Create Department Course {% endblock %}
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'admins/style.css' %}" />
+{% endblock %}
+{% block content %}
+            <div class="pad-container pt-4">
+                <div >
+                    <a href="{% url 'staff:department-course-list' %}" class="back-button large-text">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </div>
+                <h2 class="header">
+                    Create Department Course
+                </h2>
+                    <div class="pad-container">
+                        <div class="large-form-box">
+                            <div class="form-header">
+                                Fill the Form
+                            </div>
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="department" value="{{request.department.id}}">
+                                <div class="form-group">
+                                    <div class="boot-row mb-4">
+                                        <div class="side-form-group col-6">
+                                            <label for="">Level*</label>
+                                              <select name="level" id="" class="form-control" style="padding-left: 4px;">
+                                                  <option value="">Select a Level*</option>
+                                                  {% for id, x in form.fields.level.choices %}
+                                                    <option {% if form.level.value == id %}selected{% endif %} value="{{id}}">{{x}}</option>
+                                                {% endfor %}
+                                              </select>
+                                              {% if form.level.errors %}
+                                              <span class="error-msg">{{form.level.errors}}</span>
+                                              {% endif %}                        
+                                        </div>
+                                        <div class="side-form-group col-6">
+                                            <label for="">Semester*</label>
+                                              <select name="semester" id="" class="form-control" style="padding-left: 4px;">
+                                                  <option value="">Select a Semester*</option>
+                                                  {% for id, x in form.fields.semester.choices %}
+                                                    <option {% if form.semester.value == id %}selected{% endif %} value="{{id}}">{{x}}</option>
+                                                {% endfor %}
+                                              </select>
+                                              {% if form.semester.errors %}
+                                              <span class="error-msg">{{form.semester.errors}}</span>
+                                              {% endif %}                        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="boot-row mb-4">
+                                        <div class="side-form-group col-6">
+                                            <input type="number" min="1" name="min_unit" class="form-control" placeholder=" " required>
+                                            <label for="">Minimum Unit</label>
+                                        </div>
+                                        <div class="col-6 side-form-group">
+                                            <input type="number" name="max_unit" class="form-control" placeholder=" " required>
+                                            <label for="">Maximum Unit</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4" id="class_box">
+                                    <div>
+                                        <div class="boot-row mb-4">
+                                        <div class="side-form-group col-4">
+                                            <input type="number" name="units" class="form-control" placeholder=" " required>
+                                            <label for="">Unit</label>
+                                        </div>
+                                        <div class="col-6 side-form-group">
+                                            <select name="courses" class="form-control" placeholder=" " required>
+                                                <option value="">Course</option>
+                                                {% for x in courses %}
+                                                <option value="{{x.id}}">{{x.code}}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="col-2 side-form-group flex-center">
+                                            <button class="site-button w-100 m-none" id="add-form" type="button">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-group flex-center">
+                                    <input type="submit" value="Create" class="site-button">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+{% endblock %}
+{% block extrascript %}
+<script src="{% static 'staff/jquery.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'admins/form.js' %}"></script>
+  
+<script type="text/javascript">
+        var html = `<div id="class-container">
+                                    <div class="boot-row mb-4">
+                                     <div class="side-form-group col-4">
+                                        <input type="number" name="units" class="form-control" placeholder=" " required>
+                                         <label for="">Unit</label>
+                                     </div>
+                                     <div class="col-6 side-form-group">
+                                        <select name="courses" class="form-control" placeholder=" " required>
+                                             <option value="">Course</option>
+                                             {% for x in courses %}
+                                             <option value="{{x.id}}">{{x.code}}</option>
+                                             {% endfor %}
+                                         </select>
+                                     </div>
+                                     <div class="col-2 side-form-group flex-center">
+                                         <button class="site-button w-100 m-none" id="remove" type="button">
+                                             <i class="fa fa-minus"></i>
+                                         </button>
+                                     </div>
+                                     </div>
+                                </div>`
+var x = 1;
+var max = 50;
+$("#add-form").click(function(){
+      if(x<max){
+      $("#class_box").append(html);
+      x++;
+  }
+    })
+$("#class_box").on('click','#remove',function(){
+  $(this).closest('#class-container').remove()
+      x--;
+  })
+
+</script>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'admins/base.html' %}
+{% load path_checker %}
+{% block title %} Add Department {% endblock %}
+{% block content %}  
+  <div >
+  <a href="{% url 'admins:faculty-details' faculty_id %}" class="back-button large-text">
+      <i class="fas fa-arrow-left"></i>
+  </a>
+  </div>
+        <div class="pad-container pt-4">
+          <div class="pt-4">
+            <h2 class="header flex-center">Add Department</h2>
+          </div>
+          
+        <div class="flex-center page-box">
+            <div class="large-form-box">
+                <div class="form-header">
+                    Fill the Form
+                </div>
+                <form action="" method="POST" class="mb-4">
+
+                  {{form.errors}}
+                    {% csrf_token %}
+                    <input type="hidden" name="faculty" value="{{faculty_id}}">
+                    <div class="form-group mb-4">
+                      <input type="text" name="name" value="{{form.name.value|default:''}}" class="form-control" placeholder=" " required>
+                        <label> {{form.name.label}}* </label>
+                        {% if form.name.errors %}
+                        <span class="error-msg">{{form.name.errors}}</span>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group mb-4">
+                      <input type="number" name="level_number" value="{{form.level.value|default:''}}" class="form-control" placeholder=" " required>
+                        <label> No of Levels* </label>
+                        {% if form.level.errors %}
+                        <span class="error-msg">{{form.level.errors}}</span>
+                        {% endif %}
+                    </div>
+                    <div class="form-group mb-4">
+                      <label for="">Head of Department</label>
+                        <select name="head_of_dept" id="" class="form-control" style="padding-left: 4px;" >
+                            <option value="">Select a HOD</option>
+                            {% for id, x in form.fields.head_of_dept.choices %}
+                              <option {% if form.head_of_dept.value == id %}selected{% endif %} value="{{id}}">{{x}}</option>
+                          {% endfor %}
+                        </select>                        
+                 
+                    </div>
+                    <div class="form-group flex-center">
+                        <button class="site-button">
+                            <i class="fas fa-plus"></i>&nbsp;Add Department
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
