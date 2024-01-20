@@ -679,9 +679,20 @@ class AdminListView(UserPassesTestMixin, ListView):
 class AdminCreateView(UserPassesTestMixin, CreateView):
     model = Admin
     template_name = "admins/forms/add-admin-form.html"
-    fields = "__all__"
-    success_url = reverse_lazy("")
+    fields = ['firstname','lastname','image','phonenumber','role']
+    success_url = reverse_lazy("admins:admins-list")
     def form_valid(self, form):
+        email = self.request.POST.get("email")
+        password = self.request.POST.get("password")
+        obj = form.save(commit=False)
+        user = User()
+        user.email = email
+        user.set_password(password)
+        user.is_staff = True
+        user.save()
+        obj.user = user
+        obj.save()
+        messages.success(self.request,"Admin Created")
         return super().form_valid(form)
     def test_func(self):
         return self.request.user.is_superuser

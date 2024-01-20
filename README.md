@@ -12,6 +12,7 @@ Student information management system for tertiary institution
  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original-wordmark.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain-wordmark.svg" title="Django" alt="Django" width="40" />&nbsp;
 </div>
+
 ---
 
 ## Features
@@ -52,4 +53,80 @@ Student information management system for tertiary institution
 
 
 ---
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/jaykayudo/SIMS.git
+```
+
+Go to the project directory
+
+```bash
+  cd SIMS
+```
+
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+Start the server
+
+```bash
+  python manage.py runserver
+```
+
+
+## Login Credentials
+### Note: This Credentials are for the test database that is used.
+
+#### Admin
+#### email: admin@sims.com (not superuser)
+#### password: simsadmin
+
+#### Staff
+#### email: staff@sims.com 
+#### password: simsstaff
+
+#### Student
+#### email: student@sims.com
+#### password: simsstudent
+## Screenshots
+
+### Student Course Registration
+![Course Registration](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705780037/student4_ipaypi.png)
+
+### Student Course Resources
+![Course Resources](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705780037/student5_bhqghf.png)
+
+### Student Registered Courses
+![Registered Courses](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705780037/student3_gfpisp.png)
+
+### Student Profile Details
+![Profile](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705779999/student1_b7g0uq.png)
+
+### Student Course Registration Form
+![Registration Form](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705780036/student2_dkvqob.png)
+
+### Staff Student List
+![Staff List](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705779999/staff2_vi5pbe.png)
+
+### Staff Course Registration Format
+![Staff Course Reg Format](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705781260/staff4_atpdnu.png)
+
+### Staff Add Course to Registration Format
+![Staff Course Reg  Add](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705779998/staff1_cvwtvt.png)
+
+### Staff Course Resources
+![Staff Course Resources](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705780035/staff3_yh7ngd.png)
+
+### Admin All Student List
+![Staff Course Resources](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705779998/admin2_qyyeqh.png)
+
+### Admin Dashboard
+![Add Dashboard](https://res.cloudinary.com/ds81lsf2c/image/upload/v1705779992/admin1_sxju3h.png)
 
